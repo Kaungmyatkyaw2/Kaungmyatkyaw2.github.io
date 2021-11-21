@@ -140,11 +140,14 @@
 						color: #107DC0;
 					}
 
-
+					.hspan2{
+							color: #F65132;
+							padding-left: 10px
+						}
 
 
 					#home{
-						height: 100vh;		
+						height: 107vh;		
 
 						display: flex;
 						justify-content: center;
@@ -184,7 +187,7 @@ transition: all 0.7s;
 						display: flex;
 						justify-content: center;
 
-						color: #333;
+						color: #107DC0;;
 
 						transform: translateY(20px);
 
@@ -203,6 +206,7 @@ transition: all 0.7s;
 						justify-content: center;
 
 						padding-top: 20px;
+						padding-bottom: 10px;
 
 							transform: translateY(20px);
 
@@ -216,12 +220,9 @@ transition: all 0.7s;
 
 					#home a{
 
-						background-color: #14eb60;
+					
 
 						padding: 10px 20px;
-
-						border-radius: 20px;
-
 
 						font-size: 18px;
 
@@ -229,13 +230,109 @@ transition: all 0.7s;
 
 						color: #f44336;
 
-						overflow: hidden;
+						
 
 						transition: all 0.5s;
 
 						margin-top: 10px;
 
+						background-color: transparent;
+
 					}
+
+					#home a::before{
+						content: '';
+
+						width: 20px;
+						height: 20px;
+
+						position: absolute;
+						top: 0px;
+						left: 0px;
+
+
+						border:3px solid #107DC0;
+
+						border-width: 3px 0 0 3px;
+					}
+
+
+
+					#home a::after{
+						content: '';
+
+						width: 20px;
+						height: 20px;
+
+						position: absolute;
+						bottom: 0px;
+						right: 0px;
+
+
+						border:3px solid #107DC0;
+
+						border-width: 0 3px 3px 0;
+					}
+
+
+					#aboutMe{
+						height: 90vh;
+
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						flex-direction: column;
+					}
+
+					#aboutMe h1{
+						letter-spacing: 1.2px;
+
+						position: relative;
+					}
+
+					#aboutMe h1 #span1{
+						font-size: 33px;
+
+						color: #107DC0
+					}
+
+
+					#aboutMe h1 #span2{
+						font-size: 33px;
+
+						color: #F65132
+					}
+
+					#aboutMe h1::before{
+						content: '';
+
+						width: 10px;
+						height: 10px;
+
+						position: absolute;
+						left: 0;
+						bottom: -4px;
+
+						background-color: blue;
+						border-radius: 100%;
+
+						z-index: 5;
+					}
+
+					#aboutMe h1::after{
+
+							content: '';
+
+						width: 100%;
+						height: 2px;
+
+						position: absolute;
+						bottom: 0;
+						left: 0;
+
+						background-color: red;
+					}
+
 
 
 
@@ -292,6 +389,10 @@ transition: all 0.7s;
 		}
 
 
+			#home a{
+				font-size: 21px;
+			}
+
 
 	.menu,.close{
 		display: block;
@@ -339,6 +440,10 @@ transition: all 0.7s;
 
 	nav ul li a{
 		font-size: 1.4em
+	}
+
+	#home .caption{
+		padding-top: 20px;
 	}
 
 	#home{
@@ -432,15 +537,43 @@ transition: all 0.7s;
 
 			<div class="caption">
 
-				<h2 id="h2Home">Hello, I'm Kaung Myat Kyaw!</h2>
+				<h2 id="h2Home">Hello, I'm<span class="hspan2"> Kaung Myat Kyaw</span>!</h2>
 
 				<p id="pHome">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</p>
 
-				<a href="#">Download CV</a>
+				<a href="#"><span></span>Download CV</a>
 
 			</div>
 
 
+	</section>
+
+	<section id="aboutMe">
+
+		<h1><span id="span1">A</span>bout <span id="span2">M</span>e</h1>
+
+
+
+
+
+
+<div class="caption">
+
+
+	<!-- <img src="img/thinking.png"> -->
+
+
+	<div class="textBox">
+
+
+
+
+
+	</div>
+
+
+
+</div>
 	</section>
 
 </body>
@@ -472,6 +605,11 @@ function scroll1() {
 		document.getElementById('pHome').style.opacity = 1;
 
 	}
+
+
+	// if (document.documentElement.scrollTop > 105) {
+	// 	document.querySelector('#aboutMe h1::before').style.width = 100%;
+	// }
 
 } 
 

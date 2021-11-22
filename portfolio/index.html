@@ -38,7 +38,7 @@
 	body{
 		font-family: pop;
 
-		height: 200vh;
+	
 	}
 
 	nav{
@@ -147,7 +147,7 @@
 
 
 					#home{
-						height: 107vh;		
+						height: 87vh;		
 
 						display: flex;
 						justify-content: center;
@@ -155,6 +155,8 @@
 
 						position: relative;
 						background-color: white;
+
+						transform: translate(0,60px);
 					}
 
 					#home img{
@@ -276,18 +278,76 @@ transition: all 0.7s;
 
 
 					#aboutMe{
-						height: 90vh;
+						height: 83vh;
 
 						display: flex;
 						justify-content: center;
 						align-items: center;
-						flex-direction: column;
+								}
+
+					#aboutMe .caption{
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 100%;
+					}
+
+
+					#aboutMe .caption img{
+						width: 300px;
+
+						opacity: 0;
+
+						transform: rotateX(180deg);
+
+						transition: all 1s;
+					}
+
+					#aboutMe .caption .textBox p{
+						width: 840px;
+						line-height: 31px;
+						padding-left: 50px;
+					}
+
+					#aboutMe .caption .textBox #aboutMep1{
+						transform: translate(0,100px);
+						opacity: 0;
+
+						transition: all 0.5s;
+					}
+
+									#aboutMe .caption .textBox #aboutMep2{
+						transform: translate(0,100px);
+						opacity: 0;
+
+						transition: all 0.5s;
+
+						transition-delay: 0.2s;
+					}
+
+									#aboutMe .caption .textBox #aboutMep3{
+						transform: translate(0,100px);
+						opacity: 0;
+
+						
+
+						transition: all 0.5s;
+						transition-delay: 0.4s;
 					}
 
 					#aboutMe h1{
 						letter-spacing: 1.2px;
 
 						position: relative;
+
+						display: inline-block;
+
+						transform: translate(350%,-60px);
+
+
+						opacity: 0;
+
+						transition: all 0.5s;
 					}
 
 					#aboutMe h1 #span1{
@@ -356,6 +416,14 @@ transition: all 0.7s;
 			left: 0;
 			transform: translate(50px,330px);
 	}
+
+	#aboutMe .caption .textBox p{
+		width: 680px;
+	}
+
+	#aboutMe{
+		transform: translateY(270px);
+	}
 }
 
 
@@ -393,6 +461,23 @@ transition: all 0.7s;
 				font-size: 21px;
 			}
 
+			#aboutMe{
+				transform: translateY(-70px);
+			}
+
+			#aboutMe img{
+				padding-bottom: 10px
+			}
+
+			#aboutMe h1{
+				transform: translate(190%,-60px);
+			}
+
+			#aboutMe .caption{
+				flex-direction: column;
+			}
+
+
 
 	.menu,.close{
 		display: block;
@@ -428,6 +513,19 @@ transition: all 0.7s;
 	width: 600px
 }
 
+#aboutMe{
+	transform:translate(0,200px);
+	width: 111.5%;
+}
+
+#aboutMe .caption .textBox p{
+	width: 600px;
+}
+
+#aboutMe h1 {
+    transform: translate(150%,-60px)
+}
+
 	.menu,.close{
 		transform: scale(0.7) translate(500px);
 	}
@@ -447,7 +545,7 @@ transition: all 0.7s;
 	}
 
 	#home{
-		width: 120%
+		width: 125.6%
 	}
 
 	#home h2{
@@ -457,6 +555,20 @@ transition: all 0.7s;
 	#home p {
     font-size: 18px;
     width: 480px;
+}
+
+#aboutMe{
+	transform: translate(0,300px);
+	width: 125.6%
+}
+
+#aboutMe .caption .textBox p{
+	font-size: 18px;
+	width: 500px
+}
+
+#aboutMe h1{
+	transform: translate(130%,-60px)
 }
 
 		.menu,.close{
@@ -480,6 +592,10 @@ transition: all 0.7s;
 		left: 2px;
 		overflow: hidden;
 	}
+
+	#aboutMe{
+		transform: translate(0,900px);
+	}
 }
 
 @media screen and (max-width: 360px) {
@@ -490,8 +606,13 @@ transition: all 0.7s;
 	}
 
 	#home{
-		height: 100vh;
+		height: 120vh; 
 	}
+
+	#aboutMe{
+		transform: translate(0,1000px);
+	}
+
 }
 
 </style>
@@ -515,7 +636,7 @@ transition: all 0.7s;
 			
 			
 			<li><a href="#home"><span>H</span>ome</a></li>
-			<li><a href="#"><span>A</span>bout Me</a></li>
+			<li><a href="#aboutMe"><span>A</span>bout Me</a></li>
 			<li><a href="#"><span>S</span>kills</a></li>
 			<li><a href="#"><span>S</span>ervices</a></li>
 			<li><a href="#"><span>C</span>ontact</a></li>
@@ -550,28 +671,51 @@ transition: all 0.7s;
 
 	<section id="aboutMe">
 
-		<h1><span id="span1">A</span>bout <span id="span2">M</span>e</h1>
+		
 
 
+<div class="content">
 
-
+	<h1><span id="span1">A</span>bout <span id="span2">M</span>e</h1>
 
 
 <div class="caption">
 
+	
 
-	<!-- <img src="img/thinking.png"> -->
+
+
+	<img src="img/aboutme.png">
 
 
 	<div class="textBox">
 
 
+			<p id="aboutMep1">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor inaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+
+
+				<p id="aboutMep2">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor inaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+
+
+			<p id="aboutMep3">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor inaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
 
 
 
 	</div>
 
-
+</div>
 
 </div>
 	</section>
@@ -607,9 +751,23 @@ function scroll1() {
 	}
 
 
-	// if (document.documentElement.scrollTop > 105) {
-	// 	document.querySelector('#aboutMe h1::before').style.width = 100%;
-	// }
+	if (document.documentElement.scrollTop > 98) {
+		document.querySelector('#aboutMe h1').style.opacity = 1;
+	}
+	if (document.documentElement.scrollTop > 215) {
+		document.querySelector('#aboutMe .caption img').style.transform = 'rotateX(0deg)'
+		document.querySelector('#aboutMe .caption img').style.opacity = 1;
+
+		document.querySelector('#aboutMe .caption .textBox #aboutMep3').style.transform = 'translate(0,0)';
+		document.querySelector('#aboutMe .caption .textBox #aboutMep3').style.opacity = 1;
+
+		document.querySelector('#aboutMe .caption .textBox #aboutMep2').style.transform = 'translate(0,0)';
+		document.querySelector('#aboutMe .caption .textBox #aboutMep2').style.opacity = 1;
+
+		document.querySelector('#aboutMe .caption .textBox #aboutMep1').style.transform = 'translate(0,0)';
+		document.querySelector('#aboutMe .caption .textBox #aboutMep1').style.opacity = 1;
+	}
+
 
 } 
 

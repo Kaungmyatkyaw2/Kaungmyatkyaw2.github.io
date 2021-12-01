@@ -698,11 +698,24 @@ transition: all 0.7s;
 		display: none;
 	}
 
-	.menu img,.close img{
-		filter: invert(1);
-	}
+	
 }
 
+@media screen and (max-width: 712px) {
+
+#home p{
+	width: 530px
+}
+
+#aboutMe{
+	transform: translateY(-470px);
+}
+
+.menu{
+	transform: scale(0.7) translate(700px);
+}
+
+}
 
 @media screen and (max-width: 540px) {
 
@@ -733,7 +746,7 @@ transition: all 0.7s;
     transform: translate(150%,-60px)
 }
 
-	.menu,.close{
+	.menu{
 		transform: scale(0.7) translate(500px);
 	}
 }

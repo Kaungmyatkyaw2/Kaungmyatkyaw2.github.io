@@ -7,6 +7,67 @@
 
 <style type="text/css">
 
+	.toggle{
+		position: relative;
+
+		width: 70px;
+		height: 70px;
+		background-color: white;
+		/*box-shadow: 0 10px 20px rgba(0,0,0,0.08);*/
+		border-radius: 10px;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			overflow: hidden;
+
+
+	}
+
+	.toggle span{
+		position: absolute;
+		width: 40px;
+		height: 4px;
+
+		background-color: #fcd51c;
+		border-radius: 4px;
+		transition: 0.5s;
+	}
+
+	.toggle span:nth-child(1){
+		transform: translateY(-15px);
+		width: 25px;
+		left: 15px;
+
+		background-color: #107DC0;
+	}
+
+		.toggle span:nth-child(2){
+		transform: translateY(15px);
+		width: 15px;
+		left: 15px;
+
+		background-color: #F65132;
+	}
+
+	.toggle.active span:nth-child(3){
+		transform: translateX(60px);
+	}
+
+	.toggle.active span:nth-child(1){
+
+		width: 40px;
+		transform: translateY(0) rotate(45deg);
+	}
+
+	.toggle.active span:nth-child(2){
+
+		width: 40px;
+		transform: translateY(0) rotate(315deg);
+	}
+
+
 	body{
 		max-width: 100%;
 		overflow-x: hidden;
@@ -127,7 +188,9 @@
 
 
 
-
+.closetoogle{
+	transform: translate(0);
+}
 
 					nav h2{
 							color: #F65132;
@@ -278,17 +341,19 @@ transition: all 0.7s;
 
 
 					#aboutMe{
-						height: 83vh;
+						height: 100vh;
 
 						display: flex;
 						justify-content: center;
 						align-items: center;
+						padding-top: 150px
 								}
 
 					#aboutMe .caption{
 						display: flex;
 						justify-content: center;
 						align-items: center;
+						flex-direction: row-reverse;
 						width: 100%;
 					}
 
@@ -396,6 +461,140 @@ transition: all 0.7s;
 
 
 
+
+
+
+
+						#skills{
+							height: 90vh;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							flex-direction: column;
+						}
+
+					#skills h1{
+						letter-spacing: 1.2px;
+						transform: translateY(-150px);
+					}
+
+					#skills h1::before{
+						content: '';
+
+						width: 10px;
+						height: 10px;
+
+						position: absolute;
+						left: 0;
+						bottom: -4px;
+
+						background-color: blue;
+						border-radius: 100%;
+
+						z-index: 5;
+					}
+
+					#skills h1::after{
+
+							content: '';
+
+						width: 100%;
+						height: 2px;
+
+						position: absolute;
+						bottom: 0;
+						left: 0;
+
+						background-color: red;
+					}
+
+
+
+
+							#skills h1 #skill1{
+						font-size: 33px;
+
+						color: #107DC0
+					}
+
+
+					#skills h1 #skill2{
+						font-size: 33px;
+
+						color: #F65132;
+
+						padding-left:5px;
+					}
+
+					#skills .caption .skill{
+						width: 250px;
+						height: 9px;
+						background-color: #C1C9C6;
+
+						position: relative;
+
+						/*display: flex;
+						flex-direction: column-reverse;*/
+						
+						}
+
+						#skills .caption .skill .html,.css,.js,.php{
+
+							position:absolute;
+							height: 100%;
+							width: 0%;
+							background:linear-gradient(45deg,#107DC0 50%,#F65132 50%);
+
+							transition: all 1.4s;
+
+							transition-timing-function: linear;
+						}
+
+						.css{
+							width: 00%;
+						}
+
+						.js{
+							width: 0%;
+						}
+
+						.php{
+							width: 0%
+						}
+
+						#skills .caption .skill h2{
+							position: absolute;
+
+							top: -40px;
+							left: 0;
+						}
+
+						#skills .caption .skill h3{
+							position: absolute;
+							right: -60px;
+							top: -10px
+						}
+
+
+						#skills .caption{
+							display: grid;
+							grid-template-columns: 1fr 1fr;
+							grid-gap: 170px;
+						}
+
+
+						#skilltext{
+							opacity: 0;
+							transform: translateY(100px);
+
+							transition: all 0.8s;
+						}
+
+
+
+
+
+
 @media screen and (max-width: 1024px){
 
 		#nav h2{
@@ -429,9 +628,17 @@ transition: all 0.7s;
 
 @media screen and (max-width: 768px){
 
-/*	nav{
-		background-color: red
-	}*/
+	nav{
+		height: 100px
+	}
+
+	#skills{
+		display: none;
+	}
+
+	.toggle{
+		transform: scale(1.4);
+	}
 
 		nav ul{
 			
@@ -606,11 +813,14 @@ transition: all 0.7s;
 	}
 
 	#home{
-		height: 120vh; 
+		height: 120vh;
+		width: 128.7%; 
 	}
 
+
+
 	#aboutMe{
-		transform: translate(0,1000px);
+		transform: translate(0,900px);
 	}
 
 }
@@ -626,8 +836,15 @@ transition: all 0.7s;
 		<h2>My<span>Portfolio</span></h2>
 
 
-				<li class="menu" onclick="menu('.menu','.close','ul','0px')"><img src="img/menu.png"></li>
-		<li class="close" onclick="menu('.close','.menu','ul','1000px')"><img src="img/close.png"></li>
+			<li class="menu">
+
+				<div class="toggle">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+
+			</li>	
 
 
 		
@@ -637,7 +854,7 @@ transition: all 0.7s;
 			
 			<li><a href="#home"><span>H</span>ome</a></li>
 			<li><a href="#aboutMe"><span>A</span>bout Me</a></li>
-			<li><a href="#"><span>S</span>kills</a></li>
+			<li><a href="#skills"><span>S</span>kills</a></li>
 			<li><a href="#"><span>S</span>ervices</a></li>
 			<li><a href="#"><span>C</span>ontact</a></li>
 
@@ -720,9 +937,116 @@ transition: all 0.7s;
 </div>
 	</section>
 
+
+	<!-- <section id="skills">
+<div id="skilltext">		
+
+<h1><span id="skill1">M</span>y<span id="skill2">S</span>kills</h1>
+
+</div>
+
+<div class="caption">
+
+
+
+
+<div class="skill">
+	
+	<h2>HTML</h2>
+
+	<h3>80%</h3>
+
+
+<div class="html">
+
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="skill">
+	
+	<h2>Css</h2>
+
+	<h3>70%</h3>
+
+
+<div class="css">
+
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="skill">
+	
+	<h2>Javascript</h2>
+
+	<h3>50%</h3>
+
+
+<div class="js">
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="skill">
+	
+	<h2>Php</h2>
+
+	<h3>20%</h3>
+
+
+<div class="php">
+
+
+</div>
+
+
+</div>
+
+
+</div>
+	</section>
+
+
+	<section id="services">
+		
+			<h1>Services</h1>
+
+	</section>
+ -->
+
+
 </body>
 
 <script type="text/javascript">
+
+	let toggle = document.querySelector('.toggle');
+
+	toggle.onclick = function(){
+		toggle.classList.toggle('active');
+
+		let ul = document.querySelector('ul');
+
+		ul.classList.toggle('closetoogle');
+	}
+
+
+
 	
 				function menu(hidden,blocks,hiddens,pixel) {
 			document.querySelector(hidden).style.display = 'none';
@@ -731,6 +1055,9 @@ transition: all 0.7s;
 
 					document.querySelector(hiddens).style.transform = `translate(${pixel})`;
 		}
+
+
+
 
 
 window.onscroll = function() {scroll1()};
@@ -754,7 +1081,7 @@ function scroll1() {
 	if (document.documentElement.scrollTop > 98) {
 		document.querySelector('#aboutMe h1').style.opacity = 1;
 	}
-	if (document.documentElement.scrollTop > 215) {
+	if (document.documentElement.scrollTop > 305) {
 		document.querySelector('#aboutMe .caption img').style.transform = 'rotateX(0deg)'
 		document.querySelector('#aboutMe .caption img').style.opacity = 1;
 
@@ -767,6 +1094,21 @@ function scroll1() {
 		document.querySelector('#aboutMe .caption .textBox #aboutMep1').style.transform = 'translate(0,0)';
 		document.querySelector('#aboutMe .caption .textBox #aboutMep1').style.opacity = 1;
 	}
+
+	// if (document.documentElement.scrollTop > 700) {
+	// 	document.querySelector('#skilltext').style.transform = 'translateY(0)'
+	// 	document.querySelector('#skilltext').style.opacity = 1;
+	// }
+
+	// if (document.documentElement.scrollTop > 790) {
+	// 	document.querySelector('.html').style.width = '80%';
+	// 	document.querySelector('.css').style.width = '70%';	
+	// }
+
+	// if (document.documentElement.scrollTop > 850) {
+	// 	document.querySelector('.js').style.width = '50%';
+	// 	document.querySelector('.php').style.width = '20%';
+	// }
 
 
 } 

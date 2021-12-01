@@ -623,6 +623,10 @@ transition: all 0.7s;
 	#aboutMe{
 		transform: translateY(270px);
 	}
+
+	#skills{
+		transform: translate(-20px, 390px);
+	}
 }
 
 
@@ -632,9 +636,6 @@ transition: all 0.7s;
 		height: 100px
 	}
 
-	#skills{
-		display: none;
-	}
 
 	.toggle{
 		transform: scale(1.4);
@@ -669,7 +670,7 @@ transition: all 0.7s;
 			}
 
 			#aboutMe{
-				transform: translateY(-70px);
+				transform: translateY(-270px);
 			}
 
 			#aboutMe img{
@@ -684,6 +685,9 @@ transition: all 0.7s;
 				flex-direction: column;
 			}
 
+#skills {
+    transform: translate(-26px,-430px);
+}
 
 
 	.menu,.close{
@@ -715,6 +719,14 @@ transition: all 0.7s;
 	transform: scale(0.7) translate(700px);
 }
 
+#skills{
+	transform: translate(-26px,-530px);
+}
+
+#skills .caption{
+	grid-template-columns: 1fr
+}
+
 }
 
 @media screen and (max-width: 601px) {
@@ -724,6 +736,11 @@ transition: all 0.7s;
 
 	#home,#aboutMe{
 		width: 105%
+	}
+
+	#skills{
+		transform: translate(-29px,130px);
+		width: 105%;
 	}
 
 	.menu{
@@ -750,6 +767,11 @@ transition: all 0.7s;
 #aboutMe{
 	transform:translate(0,200px);
 	width: 111.5%;
+}
+
+#skills{
+	width: 111.5%;
+	transform: translate(-20px,500px);
 }
 
 #aboutMe .caption .textBox p{
@@ -801,6 +823,10 @@ transition: all 0.7s;
 	width: 125.6%
 }
 
+#skills{
+	width: 125.6%
+}
+
 #aboutMe .caption .textBox p{
 	font-size: 18px;
 	width: 500px
@@ -838,6 +864,10 @@ transition: all 0.7s;
 	#aboutMe{
 		transform: translate(0,800px);
 	}
+
+	#skills{
+		transform: translate(-20px,1200px);
+	}
 }
 
 @media screen and (max-width: 360px) {
@@ -856,6 +886,10 @@ transition: all 0.7s;
 
 	#aboutMe{
 		transform: translate(0,900px);
+	}
+
+	#skills{
+		transform: translate(-20px,1300px);
 	}
 
 }
@@ -973,7 +1007,7 @@ transition: all 0.7s;
 	</section>
 
 
-	<!-- <section id="skills">
+	<section id="skills">
 <div id="skilltext">		
 
 <h1><span id="skill1">M</span>y<span id="skill2">S</span>kills</h1>
@@ -1058,7 +1092,7 @@ transition: all 0.7s;
 	</section>
 
 
-	<section id="services">
+<!-- 	<section id="services">
 		
 			<h1>Services</h1>
 
@@ -1130,20 +1164,20 @@ function scroll1() {
 		document.querySelector('#aboutMe .caption .textBox #aboutMep1').style.opacity = 1;
 	}
 
-	// if (document.documentElement.scrollTop > 700) {
-	// 	document.querySelector('#skilltext').style.transform = 'translateY(0)'
-	// 	document.querySelector('#skilltext').style.opacity = 1;
-	// }
+	if (document.documentElement.scrollTop > 700) {
+		document.querySelector('#skilltext').style.transform = 'translateY(0)'
+		document.querySelector('#skilltext').style.opacity = 1;
+	}
 
-	// if (document.documentElement.scrollTop > 790) {
-	// 	document.querySelector('.html').style.width = '80%';
-	// 	document.querySelector('.css').style.width = '70%';	
-	// }
+	if (document.documentElement.scrollTop > 790) {
+		document.querySelector('.html').style.width = '80%';
+		document.querySelector('.css').style.width = '70%';	
+	}
 
-	// if (document.documentElement.scrollTop > 850) {
-	// 	document.querySelector('.js').style.width = '50%';
-	// 	document.querySelector('.php').style.width = '20%';
-	// }
+	if (document.documentElement.scrollTop > 850) {
+		document.querySelector('.js').style.width = '50%';
+		document.querySelector('.php').style.width = '20%';
+	}
 
 
 } 

@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+
+<style type="text/css">
+
+	.toggle{
+		position: relative;
+
+		width: 70px;
+		height: 70px;
+		background-color: white;
+		/*box-shadow: 0 10px 20px rgba(0,0,0,0.08);*/
+		border-radius: 10px;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			overflow: hidden;
+
+
+	}
+
+	.toggle span{
+		position: absolute;
+		width: 40px;
+		height: 4px;
+
+		background-color: #fcd51c;
+		border-radius: 4px;
+		transition: 0.5s;
+	}
+
+	.toggle span:nth-child(1){
+		transform: translateY(-15px);
+		width: 25px;
+		left: 15px;
+
+		background-color: #107DC0;
+	}
+
+		.toggle span:nth-child(2){
+		transform: translateY(15px);
+		width: 15px;
+		left: 15px;
+
+		background-color: #F65132;
+	}
+
+	.toggle.active span:nth-child(3){
+		transform: translateX(60px);
+	}
+
+	.toggle.active span:nth-child(1){
+
+		width: 40px;
+		transform: translateY(0) rotate(45deg);
+	}
+
+	.toggle.active span:nth-child(2){
+
+		width: 40px;
+		transform: translateY(0) rotate(315deg);
+	}
+
+
+	body{
+		max-width: 100%;
+	}
+
+	.menu,.close{
+		display: none;
+	}
+
+	*{
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+
+		list-style: none;
+		text-decoration: none;
+	}
+	
+	@font-face{
+		font-family: pop;
+		src:local(Poppins-Medium), url(img/Poppins-Medium.ttf);
+	}
+
+	@font-face{
+		font-family: nova;
+		src:local(NovaRound-Regular), url(img/NovaRound-Regular.ttf);
+	}
+
+	body{
+		font-family: pop;
+
+	
+	}
+
+	nav{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		height: 70px;
+		width: 100%;
+
+		background-color: white;
+
+		position:fixed;
+
+		z-index: 1000;
+	}
+
+
+	nav ul{
+		display: flex;
+	}
+
+	nav ul li a{
+		font-size: 18px;
+		margin-right: 70px;
+
+
+		letter-spacing: 2px;
+
+		color: #107DC0;
+
+		position: relative;
+
+	}
+
+
+	nav ul li a span{
+		font-size: 19px;
+		color: #F65132
+	}
+
+		nav ul li a::after{
+			content: '';
+
+			width: 0;
+			height: 2px;
+		
+		position: absolute;
+		left: 0;
+		bottom: -4px;
+
+		transition: all 0.3s;
+
+		background-color: #098677;
+		}
+
+
+		nav ul li a::before{
+			content: '';
+
+			width: 0;
+			height: 2px;
+		
+		position: absolute;
+		right: 0;
+		bottom: -4px;
+
+		transition: all 0.3s;
+
+		background-color: #f705c3;
+		}
+
+
+
+				nav ul li a:hover::after{
+					width: 50%;
+
+					left: 50%;
+				}
+
+				nav ul li a:hover::before{
+					width: 50%;
+
+					right: 50%;
+				}
+
+
+
+.closetoogle{
+	transform: translate(0);
+}
+
+					nav h2{
+							color: #F65132;
+
+							transform: translateX(100px);
+					}
+
+					nav span{
+						font-size: 22px;
+						color: #107DC0;
+					}
+
+					.hspan2{
+							color: #F65132;
+							padding-left: 10px
+						}
+
+
+					#home{
+						height: 87vh;		
+
+						display: flex;
+						justify-content: center;
+						align-items: center;
+
+						position: relative;
+						background-color: white;
+
+						transform: translate(0,60px);
+					}
+
+					#home img{
+						width: 300px;
+
+						position: absolute;
+						left: 100px;
+
+transform: translate(0,70px);
+
+opacity: 0;
+
+transition: all 0.7s;
+					}
+
+					#home .caption{
+						position: absolute;
+						right: 100px;
+
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						flex-direction: column;
+					}
+
+
+					#home h2{
+						letter-spacing: 2.3px;
+
+						display: flex;
+						justify-content: center;
+
+						color: #107DC0;;
+
+						transform: translateY(20px);
+
+						transition: all 0.5s;
+
+						opacity: 0
+
+					}
+
+
+					#home p{
+						width: 730px;
+						text-align: center;
+
+						display: flex;
+						justify-content: center;
+
+						padding-top: 20px;
+						padding-bottom: 10px;
+
+							transform: translateY(20px);
+
+						transition: all 0.5s;
+
+						transition-delay: 0.25s;
+
+						opacity: 0;
+
+					}
+
+					#home a{
+
+					
+
+						padding: 10px 20px;
+
+						font-size: 18px;
+
+						position: relative;
+
+						color: #f44336;
+
+						
+
+						transition: all 0.5s;
+
+						margin-top: 10px;
+
+						background-color: transparent;
+
+					}
+
+					#home a::before{
+						content: '';
+
+						width: 20px;
+						height: 20px;
+
+						position: absolute;
+						top: 0px;
+						left: 0px;
+
+
+						border:3px solid #107DC0;
+
+						border-width: 3px 0 0 3px;
+					}
+
+
+
+					#home a::after{
+						content: '';
+
+						width: 20px;
+						height: 20px;
+
+						position: absolute;
+						bottom: 0px;
+						right: 0px;
+
+
+						border:3px solid #107DC0;
+
+						border-width: 0 3px 3px 0;
+					}
+
+
+					#aboutMe{
+						height: 100vh;
+
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						padding-top: 0px
+								}
+
+					#aboutMe .caption{
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						flex-direction: row-reverse;
+						width: 100%;
+					}
+
+
+					#aboutMe .caption img{
+						width: 300px;
+
+						opacity: 0;
+
+						transform: rotateX(180deg);
+
+						transition: all 1s;
+					}
+
+					#aboutMe .caption .textBox p{
+						width: 840px;
+						line-height: 31px;
+						padding-left: 50px;
+					}
+
+					#aboutMe .caption .textBox #aboutMep1{
+						transform: translate(0,100px);
+						opacity: 0;
+
+						transition: all 0.5s;
+					}
+
+									#aboutMe .caption .textBox #aboutMep2{
+						transform: translate(0,100px);
+						opacity: 0;
+
+						transition: all 0.5s;
+
+						transition-delay: 0.2s;
+					}
+
+									#aboutMe .caption .textBox #aboutMep3{
+						transform: translate(0,100px);
+						opacity: 0;
+
+						
+
+						transition: all 0.5s;
+						transition-delay: 0.4s;
+					}
+
+					#aboutMe h1{
+						letter-spacing: 1.2px;
+
+						position: relative;
+
+						display: inline-block;
+
+						transform: translate(350%,-60px);
+
+
+						opacity: 0;
+
+						transition: all 0.5s;
+					}
+
+					#aboutMe h1 #span1{
+						font-size: 33px;
+
+						color: #107DC0
+					}
+
+
+					#aboutMe h1 #span2{
+						font-size: 33px;
+
+						color: #F65132
+					}
+
+					#aboutMe h1::before{
+						content: '';
+
+						width: 10px;
+						height: 10px;
+
+						position: absolute;
+						left: 0;
+						bottom: -4px;
+
+						background-color: #107DC0;
+						border-radius: 100%;
+
+						z-index: 5;
+					}
+
+					#aboutMe h1::after{
+
+							content: '';
+
+						width: 100%;
+						height: 2px;
+
+						position: absolute;
+						bottom: 0;
+						left: 0;
+
+						background-color: #F65132;
+					}
+
+
+
+
+
+
+
+
+						#skills{
+							height: 90vh;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							flex-direction: column;
+
+						}
+
+					#skills h1{
+						letter-spacing: 1.2px;
+						transform: translateY(-150px);
+					}
+
+					#skills h1::before{
+						content: '';
+
+						width: 10px;
+						height: 10px;
+
+						position: absolute;
+						left: 0;
+						bottom: -4px;
+
+						background-color: #107DC0;
+						border-radius: 100%;
+
+						z-index: 5;
+					}
+
+					#skills h1::after{
+
+							content: '';
+
+						width: 100%;
+						height: 2px;
+
+						position: absolute;
+						bottom: 0;
+						left: 0;
+
+						background-color: #F65132;
+					}
+
+
+
+
+							#skills h1 #skill1{
+						font-size: 33px;
+
+						color: #107DC0
+					}
+
+
+					#skills h1 #skill2{
+						font-size: 33px;
+
+						color: #F65132;
+
+						padding-left:5px;
+					}
+
+					#skills .caption .skill{
+						width: 250px;
+						height: 9px;
+						background-color: #C1C9C6;
+
+						position: relative;
+
+						/*display: flex;
+						flex-direction: column-reverse;*/
+						
+						}
+
+						#skills .caption .skill .html,.css,.js,.php{
+
+							position:absolute;
+							height: 100%;
+							width: 0%;
+							background:linear-gradient(45deg,#107DC0 50%,#F65132 50%);
+
+							transition: all 1.4s;
+
+							transition-timing-function: linear;
+						}
+
+						.css{
+							width: 00%;
+						}
+
+						.js{
+							width: 0%;
+						}
+
+						.php{
+							width: 0%
+						}
+
+						#skills .caption .skill h2{
+							position: absolute;
+
+							top: -40px;
+							left: 0;
+						}
+
+						#skills .caption .skill h3{
+							position: absolute;
+							right: -60px;
+							top: -10px
+						}
+
+
+						#skills .caption{
+							display: grid;
+							grid-template-columns: 1fr 1fr;
+							grid-gap: 170px;
+						}
+
+
+						#skilltext{
+							opacity: 0;
+							transform: translateY(100px);
+
+							transition: all 0.8s;
+						}
+
+
+@media screen and (max-width: 1280px){
+	#aboutMe,#skills{
+		margin-top: -100px
+	}
+}
+
+
+
+
+@media screen and (max-width: 1024px){
+
+		#nav h2{
+			transform: translateX(30px);
+			font-size: 28px
+		}
+
+		#skills{
+			margin-top: -100px
+		}
+
+	#home{
+		display: block;
+			padding-top: 100px;
+	}
+
+	#home img{
+		left: 35%;
+		}
+
+	#home .caption{
+			left: 0;
+			transform: translate(50px,330px);
+	}
+
+	#aboutMe .caption .textBox p{
+		width: 680px;
+	}
+
+	#aboutMe{
+		transform: translateY(270px);
+	}
+
+	#skills{
+		transform: translate(-20px, 390px);
+	}
+}
+
+
+@media screen and (max-width: 768px){
+
+	nav{
+		height: 100px
+	}
+
+
+	.toggle{
+		transform: scale(1.4);
+	}
+
+		nav ul{
+			
+			flex-direction: column;
+
+			width: 100%;
+			height: 1000vh;
+
+			background-color: white;
+		
+			justify-content: center;
+			align-items: center;
+
+				transform: translate(600px);
+
+				transition: all 1s;
+
+				margin-top: 400px;
+		}
+
+		nav ul li{
+			margin-top: 20px
+		}
+
+
+			#home a{
+				font-size: 21px;
+			}
+
+			#aboutMe{
+				margin-top: -500px
+			}
+
+			#aboutMe img{
+				padding-bottom: 10px
+			}
+
+			#aboutMe h1{
+				transform: translate(190%,-60px);
+			}
+
+			#aboutMe .caption{
+				flex-direction: column;
+			}
+
+#skills {
+    transform: translate(-26px);
+    margin-top: 30px
+}
+
+
+
+
+	.menu,.close{
+		display: block;
+
+		transform: scale(0.7) translate(800px);
+
+		z-index: 1005;
+	}
+
+	.close{
+		display: none;
+	}
+
+	
+}
+
+@media screen and (max-width: 712px) {
+
+#home p{
+	width: 530px
+}
+
+#aboutMe{
+	margin-top: -670px
+}
+
+.menu{
+	transform: scale(0.7) translate(700px);
+}
+
+#skills{
+	transform: translate(-26px);
+	margin-top: 70px
+}
+
+#skills .caption{
+	grid-template-columns: 1fr
+}
+
+}
+
+
+@media screen and (max-width: 601px) {
+	#aboutMe{
+		margin-top: -430px
+	}
+
+	#home,#aboutMe{
+		width: 105%
+	}
+
+	#skills{
+		transform: translate(-29px);
+		margin-top: 240px;
+		width: 105%;
+	}
+
+	.menu{
+		transform: scale(0.7) translate(600px);
+	}
+}
+
+
+
+@media screen and (max-width: 540px) {
+
+	#home img{
+		left: 30%;
+		}
+	
+
+#home{
+
+	width: 111.5%;
+}
+
+#home p{
+	width: 600px
+}
+
+#aboutMe{
+	width: 111.5%;
+	margin-top:0px
+}
+
+#skills{
+	width: 111.5%;
+	transform: translate(-20px);
+
+	margin-top: 470px
+}
+
+#aboutMe .caption .textBox p{
+	width: 600px;
+}
+
+#aboutMe h1 {
+    transform: translate(150%,-60px)
+}
+
+	.menu{
+		transform: scale(0.7) translate(500px);
+	}
+}
+
+@media screen and (max-width: 414px) {
+
+.toggle{
+	transform: scale(1.6);
+}
+
+	nav span{
+		font-size: 0.9em
+	}
+
+	nav ul li a{
+		font-size: 1.4em
+	}
+
+	#home .caption{
+		padding-top: 20px;
+	}
+
+	#home{
+		width: 125.6%
+	}
+
+	#home h2{
+		width: 500px
+	}
+
+	#home p {
+    font-size: 18px;
+    width: 480px;
+}
+
+#aboutMe{
+	margin-top: 0px;
+	width: 125.6%
+}
+
+#skills{
+	width: 125.6%
+}
+
+#aboutMe .caption .textBox p{
+	font-size: 18px;
+	width: 500px
+}
+
+#aboutMe h1{
+	transform: translate(130%,-60px)
+}
+
+		.menu,.close{
+		transform: scale(0.7) translate(400px);
+	}
+}
+
+@media screen and (max-width: 375px) {
+
+
+
+	#home a{
+		font-size: 22px
+	}
+
+	#home p{
+		width: 450px;
+	}
+
+	#home{
+		width: 127%;
+
+		position: absolute;
+		left: 2px;
+		overflow: hidden;
+	}
+
+	#aboutMe{
+		transform: translate(0,800px);
+	}
+
+	#skills{
+		transform: translate(-20px);
+		margin-top: 950px
+	}
+}
+
+@media screen and (max-width: 360px) {
+
+
+	.menu,.close{
+		transform: scale(0.7) translate(340px);
+	}
+
+	#home{
+		height: 120vh;
+		width: 128.7%; 
+	}
+
+
+
+	#aboutMe{
+		transform: translate(0,900px);
+	}
+
+	#skills{
+		transform: translate(-20px);
+		margin-top: 1190px
+	}
+
+}
+
+</style>
+
+<body>
+
+<section id="nav">
+
+	<nav>
+
+		<h2>My<span>Portfolio</span></h2>
+
+
+			<li class="menu">
+
+				<div class="toggle">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+
+			</li>	
+
+
+		
+		<ul>
+
+			
+			
+			<li><a href="#home"><span>H</span>ome</a></li>
+			<li><a href="#aboutMe"><span>A</span>bout Me</a></li>
+			<li><a href="#skills"><span>S</span>kills</a></li>
+			<li><a href="#"><span>S</span>ervices</a></li>
+			<li><a href="#"><span>C</span>ontact</a></li>
+
+
+
+		</ul>
+
+	</nav>
+
+</section>
+
+	<section id="home">
+		
+
+
+
+			<img src="img/thinking.png" id="imgHome">
+
+			<div class="caption">
+
+				<h2 id="h2Home">Hello, I'm<span class="hspan2"> Kaung Myat Kyaw</span>!</h2>
+
+				<p id="pHome">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry.</p>
+
+				<a href="#"><span></span>Download CV</a>
+
+			</div>
+
+
+	</section>
+
+	<section id="aboutMe">
+
+		
+
+
+<div class="content">
+
+	<h1><span id="span1">A</span>bout <span id="span2">M</span>e</h1>
+
+
+<div class="caption">
+
+	
+
+
+
+	<img src="img/aboutme.svg">
+
+
+	<div class="textBox">
+
+
+			<p id="aboutMep1">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor inaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+
+
+				<p id="aboutMep2">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor inaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+
+
+			<p id="aboutMep3">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor inaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</p>
+
+
+
+	</div>
+
+</div>
+
+</div>
+	</section>
+
+
+	<section id="skills">
+<div id="skilltext">		
+
+<h1><span id="skill1">M</span>y<span id="skill2">S</span>kills</h1>
+
+</div>
+
+<div class="caption">
+
+
+
+
+<div class="skill">
+	
+	<h2>HTML</h2>
+
+	<h3>80%</h3>
+
+
+<div class="html">
+
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="skill">
+	
+	<h2>Css</h2>
+
+	<h3>70%</h3>
+
+
+<div class="css">
+
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="skill">
+	
+	<h2>Javascript</h2>
+
+	<h3>50%</h3>
+
+
+<div class="js">
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="skill">
+	
+	<h2>Php</h2>
+
+	<h3>20%</h3>
+
+
+<div class="php">
+
+
+</div>
+
+
+</div>
+
+
+</div>
+	</section>
+
+
+<!-- 	<section id="services">
+		
+			<h1>Services</h1>
+
+	</section>
+ -->
+
+
+</body>
+
+<script type="text/javascript">
+
+	let toggle = document.querySelector('.toggle');
+
+	toggle.onclick = function(){
+		toggle.classList.toggle('active');
+
+		let ul = document.querySelector('ul');
+
+		ul.classList.toggle('closetoogle');
+	}
+
+
+
+	
+				function menu(hidden,blocks,hiddens,pixel) {
+			document.querySelector(hidden).style.display = 'none';
+
+				document.querySelector(blocks).style.display = 'block';
+
+					document.querySelector(hiddens).style.transform = `translate(${pixel})`;
+		}
+
+
+
+
+
+window.onscroll = function() {scroll1()};
+
+function scroll1() {
+
+	if (document.documentElement.scrollTop > 0) {
+		document.getElementById('imgHome').style.transform = `translate(0,0px)`;
+		document.getElementById('imgHome').style.opacity = 1;
+
+			document.getElementById('h2Home').style.transform = `translateY(0)`;
+		document.getElementById('h2Home').style.opacity = 1;
+
+
+	document.getElementById('pHome').style.transform = `translateY(0)`;
+		document.getElementById('pHome').style.opacity = 1;
+
+	}
+
+
+	if (document.documentElement.scrollTop > 98) {
+		document.querySelector('#aboutMe h1').style.opacity = 1;
+	}
+	if (document.documentElement.scrollTop > 305) {
+		document.querySelector('#aboutMe .caption img').style.transform = 'rotateX(0deg)'
+		document.querySelector('#aboutMe .caption img').style.opacity = 1;
+
+		document.querySelector('#aboutMe .caption .textBox #aboutMep3').style.transform = 'translate(0,0)';
+		document.querySelector('#aboutMe .caption .textBox #aboutMep3').style.opacity = 1;
+
+		document.querySelector('#aboutMe .caption .textBox #aboutMep2').style.transform = 'translate(0,0)';
+		document.querySelector('#aboutMe .caption .textBox #aboutMep2').style.opacity = 1;
+
+		document.querySelector('#aboutMe .caption .textBox #aboutMep1').style.transform = 'translate(0,0)';
+		document.querySelector('#aboutMe .caption .textBox #aboutMep1').style.opacity = 1;
+	}
+
+	if (document.documentElement.scrollTop > 700) {
+		document.querySelector('#skilltext').style.transform = 'translateY(0)'
+		document.querySelector('#skilltext').style.opacity = 1;
+	}
+
+	if (document.documentElement.scrollTop > 790) {
+		document.querySelector('.html').style.width = '80%';
+		document.querySelector('.css').style.width = '70%';	
+	}
+
+	if (document.documentElement.scrollTop > 850) {
+		document.querySelector('.js').style.width = '50%';
+		document.querySelector('.php').style.width = '20%';
+	}
+
+
+} 
+
+
+</script>
+
+</html>

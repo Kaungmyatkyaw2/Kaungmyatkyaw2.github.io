@@ -345,7 +345,7 @@ transition: all 0.7s;
 						display: flex;
 						justify-content: center;
 						align-items: center;
-						padding-top: 150px
+						padding-top: 0px
 								}
 
 					#aboutMe .caption{
@@ -470,6 +470,7 @@ transition: all 0.7s;
 							justify-content: center;
 							align-items: center;
 							flex-direction: column;
+
 						}
 
 					#skills h1{
@@ -590,6 +591,11 @@ transition: all 0.7s;
 						}
 
 
+@media screen and (max-width: 1280px){
+	#aboutMe,#skills{
+		margin-top: -100px
+	}
+}
 
 
 
@@ -599,6 +605,10 @@ transition: all 0.7s;
 		#nav h2{
 			transform: translateX(30px);
 			font-size: 28px
+		}
+
+		#skills{
+			margin-top: -100px
 		}
 
 	#home{
@@ -669,7 +679,7 @@ transition: all 0.7s;
 			}
 
 			#aboutMe{
-				transform: translateY(-270px);
+				margin-top: -500px
 			}
 
 			#aboutMe img{
@@ -685,8 +695,11 @@ transition: all 0.7s;
 			}
 
 #skills {
-    transform: translate(-26px,-430px);
+    transform: translate(-26px);
+    margin-top: 30px
 }
+
+
 
 
 	.menu,.close{
@@ -711,7 +724,7 @@ transition: all 0.7s;
 }
 
 #aboutMe{
-	transform: translateY(-470px);
+	margin-top: -670px
 }
 
 .menu{
@@ -719,7 +732,8 @@ transition: all 0.7s;
 }
 
 #skills{
-	transform: translate(-26px,-530px);
+	transform: translate(-26px);
+	margin-top: 70px
 }
 
 #skills .caption{
@@ -731,7 +745,7 @@ transition: all 0.7s;
 
 @media screen and (max-width: 601px) {
 	#aboutMe{
-		transform: translateY(-200px);
+		margin-top: -430px
 	}
 
 	#home,#aboutMe{
@@ -739,7 +753,8 @@ transition: all 0.7s;
 	}
 
 	#skills{
-		transform: translate(-29px,-100px);
+		transform: translate(-29px);
+		margin-top: 240px;
 		width: 105%;
 	}
 
@@ -767,13 +782,15 @@ transition: all 0.7s;
 }
 
 #aboutMe{
-	transform:translate(0,200px);
 	width: 111.5%;
+	margin-top:0px
 }
 
 #skills{
 	width: 111.5%;
-	transform: translate(-20px,500px);
+	transform: translate(-20px);
+
+	margin-top: 470px
 }
 
 #aboutMe .caption .textBox p{
@@ -821,7 +838,7 @@ transition: all 0.7s;
 }
 
 #aboutMe{
-	transform: translate(0,200px);
+	margin-top: 0px;
 	width: 125.6%
 }
 
@@ -868,7 +885,8 @@ transition: all 0.7s;
 	}
 
 	#skills{
-		transform: translate(-20px,1200px);
+		transform: translate(-20px);
+		margin-top: 950px
 	}
 }
 
@@ -891,7 +909,8 @@ transition: all 0.7s;
 	}
 
 	#skills{
-		transform: translate(-20px,1300px);
+		transform: translate(-20px);
+		margin-top: 1190px
 	}
 
 }
@@ -973,7 +992,7 @@ transition: all 0.7s;
 
 
 
-	<img src="img/aboutme.png">
+	<img src="img/aboutme.svg">
 
 
 	<div class="textBox">

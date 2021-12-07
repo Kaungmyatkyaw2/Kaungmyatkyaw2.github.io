@@ -753,6 +753,244 @@ transition: all 0.7s;
 						transition: all 0.7s;
 					}
 
+
+					#contact{
+						height: 100vh;
+
+						display: flex;
+						justify-content: center;
+						align-items: center;
+
+						flex-direction: column;
+
+						padding-top: 90px;
+
+						margin-top: 100px;
+					}
+
+					#contact h1{
+						letter-spacing: 1.5px;
+
+						transform: translateY(-100px);
+					}
+
+					#contact h1::before{
+						content: '';
+
+						width: 10px;
+						height: 10px;
+
+						position: absolute;
+						left: 0;
+						bottom: -4px;
+
+						background-color: #107DC0;
+						border-radius: 100%;
+
+						z-index: 5;
+					}
+
+					#contact h1::after{
+
+							content: '';
+
+						width: 100%;
+						height: 2px;
+
+						position: absolute;
+						bottom: 0;
+						left: 0;
+
+						background-color: #F65132;
+					}
+
+
+					#contact h1 #c_span1{
+						color: #007BFF;
+						font-size: 33px;
+					}
+
+					
+					#contact h1 #c_span2{
+						color: #F65132;
+						font-size: 33px;
+					}
+
+
+					
+					#contact h1 #c_span3{
+						color: #fcd51c;
+						font-size: 33px;
+					}
+
+					#contact .caption{
+						display: grid;
+						grid-template-columns: 1fr 1fr;
+						grid-gap: 100px;
+
+						place-items: center;
+					}
+					
+
+					#contact .caption .touch{
+						border: 2px solid rgba(0,0,0,0.125);
+						border-radius: 5px;
+						padding: 50px;
+
+						max-height: 300px;
+					}
+
+
+					#contact .caption p{
+						padding-bottom: 30px;
+						color: #f44336;
+					}
+
+					
+
+					#contact .caption #address,#phone{
+						font-size: 20px;
+						font-weight: 100;
+						padding-top: 10px;
+						padding-left: 60px;
+
+					}
+
+					#contact .caption #address{
+						background-image: url('img/house.png');
+						background-repeat: no-repeat;
+						background-size: 40px;
+					}
+
+					#contact .caption #phone{
+						background-image: url('img/phone.png');
+						background-repeat: no-repeat;
+						background-size: 35px;
+						background-position: left center;
+						margin-top: 15px;
+					}
+
+					#contact .sendbox{
+						border: 2px solid rgba(0,0,0,0.125);
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						flex-direction: column;
+
+						padding: 20px;
+						width: 400px;
+					}
+
+					#contact .sendbox input{
+						padding: 10px;
+						height: 30px;
+						width: 200px;
+						margin-bottom: 20px;
+					}
+
+					#contact .sendbox .mess1{
+						font-size: 23px;
+						color: #007BFF;
+					}
+
+					#contact .sendbox .mess2{
+						font-size: 23px;
+						color: #f44336
+					}
+
+					#contact .sendbox h2{
+						padding-bottom: 30px;
+					}
+
+					#contact #mess{
+						height: 70px;
+					}
+
+					
+
+					#contact a span{
+						color: #007BFF;
+					}
+
+#contact a{
+
+margin-left: 15px;
+
+
+
+padding: 10px 20px;
+
+font-size: 18px;
+
+position: relative;
+
+color: #f44336;
+
+
+
+transition: all 0.5s;
+
+margin-top: 50px;
+
+
+background-color: transparent;
+
+}
+
+#contact a::before{
+content: '';
+
+width: 20px;
+height: 20px;
+
+position: absolute;
+top: 0px;
+left: 0px;
+
+
+border:3px solid #107DC0;
+
+border-width: 3px 0 0 3px;
+
+transition: all 0.5s;
+}
+
+
+#contact .button{
+	padding-top: 30px;
+}
+
+
+#contact a::after{
+content: '';
+
+width: 20px;
+height: 20px;
+
+position: absolute;
+bottom: 0px;
+right: 0px;
+
+
+border:3px solid #f44336;
+
+border-width: 0 3px 3px 0;
+
+transition: all 0.5s;
+}
+
+#contact a:hover::after, #contact a:hover::before{
+height: 94%;
+width: 97%;
+}
+
+
+					::placeholder{
+						font-family: pop;
+					}
+
+
+
 					
 @media screen and (max-width: 1280px){
 	#aboutMe,#skills{
@@ -806,6 +1044,18 @@ transition: all 0.7s;
 
 	#services .caption{
 		grid-template-columns:1fr
+	}
+
+	#contact{
+		margin-top: 300px;
+	}
+
+	#contact .caption{
+		grid-gap: 0px;
+	}
+
+	#contact .touch{
+		margin-left: 30px
 	}
 }
 
@@ -887,7 +1137,20 @@ transition: all 0.7s;
 		display: none;
 	}
 
-	
+	#contact{
+		margin-top: 100px;
+	}
+
+	#contact .caption{
+		grid-template-columns: 1fr;
+		grid-gap: 90px;
+		
+		transform:translate(-100px)
+	}
+
+	#contact .sendbox{
+		transform: translate(-45px);
+	}
 }
 
 @media screen and (max-width: 712px) {
@@ -917,6 +1180,14 @@ transition: all 0.7s;
 #services{
 	margin-top: -120px;
 }
+
+#contact{
+		margin-top: 0px;
+	}
+
+	#contact .caption{
+		transform: translate(-50px);
+	}
 
 }
 
@@ -948,6 +1219,15 @@ transition: all 0.7s;
 
 	#services .caption .service_box .textBox p{
 		font-size: 14.65px;
+	}
+
+	#contact{
+		width: 105%;
+		margin-top: 150px;
+	}
+
+	#contact .caption{
+		transform: translate(-10px);
 	}
 }
 
@@ -1007,6 +1287,11 @@ transition: all 0.7s;
 
 	#services .caption .service_box{
 		transform: scale(0.9);
+	}
+
+	#contact{
+		width: 111.5%;
+		margin-top: 400px;
 	}
 }
 
@@ -1079,6 +1364,18 @@ transition: all 0.7s;
 	#services .caption .service_box .textBox p span{
 				display: none;
 	}
+
+	#contact{
+		width: 125.6%
+	}
+
+	#contact .sendbox{
+		transform:translate(-15px)
+	}
+
+	#contact input{
+		font-size: 18px;
+	}
 }
 
 @media screen and (max-width: 375px) {
@@ -1114,6 +1411,14 @@ transition: all 0.7s;
 		transform: translate(10.5px);
 		margin-top: 300px;
 	}
+
+	#contact .sendbox{
+		transform: translate(-5px);
+	}
+
+
+
+	
 }
 
 @media screen and (max-width: 360px) {
@@ -1142,6 +1447,10 @@ transition: all 0.7s;
 	#services{
 		margin-top: 450px;
 		transform: translate(22px);
+	}
+
+	#contact .sendbox{
+		transform: translate(6px);
 	}
 
 }
@@ -1427,6 +1736,73 @@ transition: all 0.7s;
 
 		</div>
 
+
+
+	</section>
+
+
+
+
+	<section id="contact">
+
+
+			<div class="con_text">
+
+				<h1><span id="c_span1">G</span>et <span id="c_span2">I</span>n <span id="c_span3">T</span>ouch</h1>
+
+				</div>
+
+
+				<div class="caption">
+
+					<div class="touch">
+
+						<h2>Adrees to Toch</h2>
+
+						<p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+
+
+						<div class="Address and Phone Number">
+
+							<h2 id="address">N0.9 Shwe Gu GYi Street, Pakokku</h2>
+							<h2 id="phone">0977535469</h2>
+
+						</div>
+
+					</div>
+
+					<div class="sendbox">
+
+						<h2><span class="mess1">M</span>essage <span class="mess2">H</span>ere</h2>
+
+						<form method="" action="">
+
+							<label for="name"><span class="mess1">Y</span>our <span class="mess2">N</span>ame</label><br/>
+							<input type="text" id="name" name="name" placeholder="Your Name"> <br/>
+
+							<label for="title"><span class="mess1">A</span>bout <span class="mess2">T</span>itle</label><br/>
+							<input type="text" id="title" name="title" placeholder="About Title"> <br/>
+
+
+							<label for="mess"><span class="mess1">M</span>essage<br/>
+							<input type="text" id="mess" name="mess" placeholder="Message"> <br/>
+
+
+							
+
+
+
+						</form>
+
+						<div class="button">
+						
+						<a href="#">Send <span>Message</span></a>
+
+						</div>
+
+					</div>
+
+					</div>
 
 
 	</section>

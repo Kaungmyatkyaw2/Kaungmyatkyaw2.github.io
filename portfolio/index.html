@@ -984,6 +984,22 @@ height: 94%;
 width: 97%;
 }
 
+#footer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	padding: 20px 0;
+
+	background: linear-gradient(80deg,#007BFF 50%,#f44336 50%);
+}
+
+#footer p{
+	text-transform: capitalize;
+
+	color: #fff;
+}
+
 
 					::placeholder{
 						font-family: pop;
@@ -1056,6 +1072,10 @@ width: 97%;
 
 	#contact .touch{
 		margin-left: 30px
+	}
+
+	#footer{
+		transform:translateY(50px)
 	}
 }
 
@@ -1189,6 +1209,15 @@ width: 97%;
 		transform: translate(-50px);
 	}
 
+	#footer p{
+		text-align: center;
+		font-size: 18.5px;
+	}
+
+	#footer span{
+		display: block;
+	}
+
 }
 
 
@@ -1228,6 +1257,10 @@ width: 97%;
 
 	#contact .caption{
 		transform: translate(-10px);
+	}
+
+	#footer{
+		width: 109.5%;
 	}
 }
 
@@ -1292,6 +1325,11 @@ width: 97%;
 	#contact{
 		width: 111.5%;
 		margin-top: 400px;
+	}
+
+	#footer{
+		transform: translateY(200px);
+		width: 111.5%;
 	}
 }
 
@@ -1376,6 +1414,10 @@ width: 97%;
 	#contact input{
 		font-size: 18px;
 	}
+
+	#footer{
+		width: 125.6%;
+	}
 }
 
 @media screen and (max-width: 375px) {
@@ -1391,7 +1433,7 @@ width: 97%;
 	}
 
 	#home{
-		width: 127%;
+		width: 135%;
 
 		position: absolute;
 		left: 2px;
@@ -1416,7 +1458,9 @@ width: 97%;
 		transform: translate(-5px);
 	}
 
-
+#footer{
+	width: 135%;
+}
 
 	
 }
@@ -1430,7 +1474,7 @@ width: 97%;
 
 	#home{
 		height: 120vh;
-		width: 128.7%; 
+		width: 140.6%; 
 	}
 
 
@@ -1449,8 +1493,17 @@ width: 97%;
 		transform: translate(22px);
 	}
 
+	#contact{
+		transform:translate(22px);
+		margin-top:600px;
+	}
+
 	#contact .sendbox{
 		transform: translate(6px);
+	}
+
+	#footer{
+		width: 140.6%;
 	}
 
 }
@@ -1807,7 +1860,11 @@ width: 97%;
 
 	</section>
 
+<section id="footer">
 
+	<p>Copy Right @ Kaung Myat Kyaw, All serve reverse 2021.<span>This site is make by kaung Myat kyaw.</span></p>
+
+</section>
 
 </body>
 

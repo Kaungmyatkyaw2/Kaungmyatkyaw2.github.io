@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Simpsons Website</title>
+
+    <meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1.0">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <script src="all.min.js"></script>
+
+</head>
+
+<style>
+
+    @font-face {
+        font-family: ubuntu;
+        src: local(Ubuntu-Ubuntu-LightItalic),url(img/Ubuntu-LightItalic.ttf);
+    }
+
+    @font-face {
+        font-family: pop;
+        src: local(Poppins-Medium),url(img/Poppins-Medium.ttf)
+    }
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* all similar styling */
+
+.max-width{
+  max-width: 1300px;
+  
+}
+
+
+/* styling menu button */
+
+
+.menu-btn{
+    display: none;
+    font-size: 23px;
+    color: #f65132;
+    cursor: pointer;
+}
+
+/* styling navbar */
+
+
+
+
+.navbar .max-width{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding:9px 40px;
+}
+
+.navbar{
+    width: 100%;
+    position: fixed;
+    margin: auto;
+    padding: 5px 10px;
+
+    background-color: #fff;
+
+    box-shadow: 0px 3px 10px #222;
+
+    z-index: 999;
+}
+
+.navbar .logo{
+    font-size: 35px;
+    font-family: ubuntu;
+    font-weight: 600;
+    color: #107dc0;
+}
+
+.navbar .logo span{
+    color:#fed41d ;
+}
+
+.navbar .menu li{
+    display: inline-block;
+}
+
+.navbar .menu li a{
+    font-size: 18px;
+    margin-right: 37px;
+    font-family: pop;
+
+    color: #f65132;
+}
+
+
+/* styling home section */
+
+.home{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(150deg,white 50%,#fed41d 50%);
+   z-index:-90
+}
+
+.home .title{
+    font-size: 45px;
+font-family: ubuntu;
+color: #f65132;
+margin: 40px 0;
+
+}
+
+.home a{
+    background-color: #107dc0;
+    color: #fff;
+    font-family: pop;
+
+     padding: 15px 23px;
+      font-size: 19px;
+      margin: 0 50px;
+
+    border-radius: 6px;
+    border: 3px solid #107dc0;
+
+    transition: all 0.3s ease;
+}
+
+.home a:hover{
+    background: none;
+    color: #107dc0;
+}
+
+
+@media (max-width:990px){
+
+  
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+
+    .menu-btn i.active::before{
+        content: '\f00d';
+    }
+
+    .navbar .menu {
+    position: fixed;
+    background: #fff;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: -100%;
+
+    text-align: center;
+    padding-top: 80px;
+
+    transition: all 0.3s ease;
+
+    z-index: 999;
+  }
+
+  .navbar .menu.active {
+    left: 0;
+  }
+
+    .navbar .menu li{
+        display: block;
+    }
+
+   
+
+    .navbar .menu li a{
+        margin: 20px 0;
+        display: inline-block;
+    }
+
+
+}
+
+
+@media (max-width:470px){
+    .navbar .max-width{
+        padding: 10px 0;
+    }
+}
+
+@media (max-width:430px){
+    .home .title{
+        transform: scale(0.8);
+    }
+
+    .home a{
+        font-size:15px;
+        margin-left: 75px;
+    }
+
+}
+
+</style>
+
+<body>
+
+
+    <!-- navbar section start -->
+
+    <nav class="navbar">
+
+        <div class="max-width">
+
+            <div class="logo"><a>Simp<span>sons.</span></a></div>
+
+            <ul class="menu">
+
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Character</a></li>
+                <li><a href="#">Season</a></li>
+                <li><a href="#">Cast</a></li>
+
+            </ul>
+
+            <div class="menu-btn">
+
+                <i class="fas fa-bars"></i>
+
+            </div>
+
+
+        </div>
+
+    </nav>
+
+
+
+<!-- Home Section start -->
+
+<section class="home" id="home">
+
+    <div class="max-width">
+
+        <h1 class="title">We are Simpsons!</h1>
+
+        <a href="#" class="trailer">View some trailer</a>
+
+    </div>
+
+</section>
+
+
+
+
+    <script>
+
+$(document).ready(function(){
+
+
+    $('.menu-btn').click(function(){
+        $('.navbar .menu').toggleClass("active");
+        $('.menu-btn i').toggleClass("active");
+    });
+
+ 
+
+
+})
+
+ 
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -446,7 +446,7 @@ section .title::after {
     z-index: 999;
   }
 
-  .menu-btn i.active:before {
+  .menu-btn #mistake.active::before {
     content: "\f00d";
   }
 

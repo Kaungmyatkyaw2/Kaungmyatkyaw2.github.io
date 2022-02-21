@@ -40,6 +40,41 @@
 .max-width{
   max-width: 1300px;
   
+
+  margin: auto;
+
+  padding: 0 80px;
+}
+
+section{
+    padding: 50px 0;
+}
+
+section .title{
+    position: relative;
+
+
+}
+
+
+
+section .title::after{
+    content: '';
+    
+    position:absolute;
+    left: 50%;
+    top: -25px;
+
+    z-index: -3;
+
+    
+
+    /* background-color: white; */
+    color: #f65132;
+    font-size: 60px;
+    opacity: 0.6;
+
+    transform:translate(-50%) scale(0.8);
 }
 
 
@@ -50,6 +85,7 @@
     display: none;
     font-size: 23px;
     color: #f65132;
+
     cursor: pointer;
 }
 
@@ -103,7 +139,10 @@
 }
 
 
+
+
 /* styling home section */
+
 
 .home{
     height: 100vh;
@@ -124,9 +163,6 @@
 font-family: ubuntu;
 color: #f65132;
 margin: 40px 0;
-
-
-
 }
 
 .home a{
@@ -150,9 +186,98 @@ margin: 40px 0;
 }
 
 
+/* about section styling */
+
+.about{
+    font-family: pop;
+    padding: 80px 40px;
+}
+
+
+.about .title{
+    font-size: 40px;
+    text-align: center;
+    font-weight: 500;
+
+    margin-bottom: 80px;
+}
+
+.about .title::after{
+    content: 'About us';
+}
+
+.about .about-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about .about-content .left{
+    width:45%;
+}
+
+.about .about-content .right{
+    width: 55%;
+
+    /* background: #11f367; */
+}
+
+
+.about .about-content .left img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+
+    border-radius: 6px;
+}
+
+
+.about .about-content .right h2{
+    font-size: 25px;
+}
+
+.about .about-content .right h2 span{
+    color: #f65132;
+}
+
+.about .about-content .right p{
+    font-size: 16px;
+    text-align: justify;
+
+    margin: 20px 0;
+}
+
+.about .about-content .right a{
+    font-size: 17px;
+    background:#107dc0;
+    color: #fff;
+    border: 2px solid #107dc0;
+    border-radius: 6px;
+
+    padding: 7px 15px;
+
+    transition: all 0.3s ease;
+
+}
+
+.about .about-content .right a:hover{
+    background: none;
+    color: #107dc0;
+}
+
+@media (max-width:1100px){
+    .about .about-content .left img{
+        width: 300px;
+        height: 300px;
+    }
+}
+
 @media (max-width:990px){
 
   
+   
+
     .menu-btn{
         display: block;
         z-index: 999;
@@ -193,13 +318,49 @@ margin: 40px 0;
         display: inline-block;
     }
 
+    .max-width{
+        max-width: 900px;
+        padding: 0;
+        margin: 0;
+    }
+
+    section{
+        padding: 0 10px;
+    }
+    
+.about .about-content .column{
+    width: 100%;
+}
+
+.about .about-content .left{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 60px;
+}
+
+.about .about-content .right{
+    flex: 100%;
+}
+
 
 }
+
+@media (max-width:716px){
+    .about .title::after{
+        content: '';
+    }
+}
+
+
 
 
 @media (max-width:470px){
     .navbar .max-width{
         padding: 10px 0;
+    }
+
+    .max-width{
+        max-width: 500px;
     }
 }
 
@@ -273,6 +434,45 @@ margin: 40px 0;
 
 </section>
 
+
+
+<!-- about section start -->
+
+
+<section class="about" id="about">
+
+
+    <div class="max-width">
+
+        <h2 class="title">About us</h2>
+
+
+        <div class="about-content">
+
+            <div class="column left">
+
+                <img src="img/profile.jpg" alt="family">
+
+            </div>
+
+            <div class="column right">
+
+                <h2>We are <span>Simpsons!</span></h2>
+
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae repellendus est, deleniti accusantium reiciendis quis consectetur! Dicta, alias possimus itaque fugit quod dolorem suscipit, quia architecto aut natus obcaecati sequi voluptatum deserunt temporibus officiis quis. Delectus quibusdam, error maiores quae debitis minima reiciendis nihil odio adipisci magnam ullam ut expedita!</p>
+
+                <a href="#">Read more</a>
+
+            </div>
+
+        </div>
+
+    
+
+    </div>
+
+
+</section>
 
 
 

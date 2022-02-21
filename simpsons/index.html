@@ -74,7 +74,7 @@
 
     background-color: #fff;
 
-    box-shadow: 0px 3px 10px #222;
+    /* box-shadow: 0px 3px 10px #222; */
 
     z-index: 999;
 }
@@ -111,8 +111,12 @@
     justify-content: center;
     align-items: center;
 
-    background: linear-gradient(150deg,white 50%,#fed41d 50%);
-   z-index:-90
+    background: url(img/home-bg.jpg);
+    -webkit-background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+   z-index:-1;
 }
 
 .home .title{
@@ -120,6 +124,8 @@
 font-family: ubuntu;
 color: #f65132;
 margin: 40px 0;
+
+
 
 }
 
@@ -249,11 +255,19 @@ margin: 40px 0;
 
 <section class="home" id="home">
 
+
+    
+
     <div class="max-width">
+
+        
 
         <h1 class="title">We are Simpsons!</h1>
 
         <a href="#" class="trailer">View some trailer</a>
+
+
+    
 
     </div>
 

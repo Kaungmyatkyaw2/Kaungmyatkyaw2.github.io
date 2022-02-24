@@ -282,25 +282,73 @@ color: #107dc0;
 
 
 
-/* .character .char-content{
+.character .char-content{
     display: flex;
-    justify-content: sp;
+    justify-content: space-between;
     align-items: center;
 
 }
 
+.character .char-content .card{
+    text-align: center;
+}
 
 .character .char-content .card .box img{
+
+    -webkit-box-reflect: below 0 linear-gradient(transparent, rgb(0, 0, 0 ,0.5));
+
+    margin-left: 10px;
     
-    height: 230px
-} */
+    height:230px;
+}
+
+.character .char-content .card .box img[alt='marge']{
+    height: 250px;
+}
+
+.character .char-content .card .box img[alt="lisa"],
+.character .char-content .card .box img[alt="maggie"]
+{
+    height: 190px;
+}
+
+
+.character .char-content .card .box .name{
+
+    font-size: 18px;
+
+}
+
+
 
 
 @media (max-width:1100px){
+
 .about .about-content .left img{
 width: 300px;
-height: 300px;
+height:300px;
 }
+
+.character .char-content{
+    padding-left: 15px;
+}
+
+
+
+.character .char-content{
+    flex-direction: column;
+}
+
+.character .char-content .card{
+    margin-bottom: 50px;
+}
+
+.character .char-content .card .box img{
+    
+
+    -webkit-box-reflect: below 0 linear-gradient(transparent, transparent);
+}
+
 }
 
 @media (max-width:990px){
@@ -412,7 +460,7 @@ font-size:15px;
 
 }
 
-@media (.max-width:390px){
+@media (max-width:390px){
     .home .max-width{
         padding-right: -5px;
     }
@@ -538,7 +586,11 @@ font-size:15px;
 </section>
 
 
-<!-- 
+
+
+
+<!-- character section start -->
+
 <section class="character" id="character">
 
     <div class="max-width">
@@ -552,7 +604,7 @@ font-size:15px;
 
                 <div class="box">
 
-                    <img src="img/homer.png" alt="">
+                    <img src="img/homer.png" alt=""homer>
 
                     <div class="name">Homer Simpson</div>
 
@@ -565,7 +617,7 @@ font-size:15px;
 
                 <div class="box">
 
-                    <img src="img/marge.png" alt="">
+                    <img src="img/marge.png" alt="marge">
 
                     <div class="name">Marge Simpson</div>
 
@@ -578,7 +630,7 @@ font-size:15px;
 
                 <div class="box">
 
-                    <img src="img/bart.png" alt="">
+                    <img src="img/bart.png" alt="bart">
 
                     <div class="name">Bart Simpson</div>
 
@@ -591,7 +643,7 @@ font-size:15px;
 
                 <div class="box">
 
-                    <img src="img/lisa.png" alt="">
+                    <img src="img/lisa.png" alt="lisa">
 
                     <div class="name">Lisa Simpson</div>
 
@@ -604,9 +656,9 @@ font-size:15px;
 
                 <div class="box">
 
-                    <img src="img/maggie.png" alt="">
+                    <img src="img/maggie.png" alt="maggie">
 
-                    <div class="name">Homer Simpson</div>
+                    <div class="name">Maggie Simpson</div>
 
                 </div>
 
@@ -617,7 +669,7 @@ font-size:15px;
 
     </div>
 
-</section> -->
+</section>
 
 
 

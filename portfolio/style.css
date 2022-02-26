@@ -475,6 +475,23 @@ section .title::after {
   font-size: 25px;
   font-weight: 500;
   margin: 10px 0 7px 0;
+  padding-top: 10px;
+}
+
+.teams .carousel .card a{
+  text-align: justify;
+
+  display: inline-block;
+  background-color: #f65132;
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 2px solid #f65132;
+  margin-top: 20px;
+  font-weight: 500;
+
+  transition: all 0.3s ease; 
 }
 
 .owl-dots {

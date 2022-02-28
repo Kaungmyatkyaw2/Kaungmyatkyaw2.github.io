@@ -8,6 +8,11 @@
   src: local(Ubuntu-Regular), url(img/Ubuntu-Regular.ttf);
 }
 
+@font-face {
+  font-family: big;
+  src: local(BigShouldersDisplay-VariableFont_wght), url(img/Big_Shoulders_Display/BigShouldersDisplay-VariableFont_wght.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -26,8 +31,10 @@
 }
 
 .navbar .logo {
-  font-family: ubuntu;
+  font-family: big;
   font-weight: 600;
+  letter-spacing: 3px;
+  
 }
 
 .navbar .logo span {
@@ -132,25 +139,25 @@
 }
 
 .home .home-content .text-3 span {
-  color: #107dc0;
+  color: #11f367;
   font-weight: 500;
 }
 
 .home .home-content a {
   display: inline-block;
-  background-color: #107dc0;
+  background-color: #9457eb;
   color: #fff;
   font-size: 25px;
   padding: 12px 36px;
   border-radius: 6px;
-  border: 2px solid #107dc0;
+  border: 2px solid #9457eb;
   margin-top: 20px;
 
   transition: all 0.3s ease;
 }
 
 .home .home-content a:hover {
-  color: #107dc0;
+  color: #9457eb;
   background: none;
 }
 
@@ -206,7 +213,7 @@ section .title::after {
 
   font-size: 20px;
   font-weight: 600;
-  color: #107dc0;
+  color: #9457eb;
 
   padding: 5px;
 
@@ -255,12 +262,12 @@ section .title::after {
   text-align: justify;
 
   display: inline-block;
-  background-color: #107dc0;
+  background-color: #9457eb;
   color: #fff;
   font-size: 20px;
   padding: 10px 30px;
   border-radius: 6px;
-  border: 2px solid #107dc0;
+  border: 2px solid #9457eb;
   margin-top: 20px;
   font-weight: 500;
 
@@ -268,7 +275,7 @@ section .title::after {
 }
 
 .about .about-content .right a:hover {
-  color: #107dc0;
+  color: #9457eb;
   background: none;
 }
 
@@ -415,14 +422,19 @@ section .title::after {
 
 .skills .skills-content .right .css::before {
   width: 60%;
+
+  background-color: #9457eb;
 }
 
 .skills .skills-content .right .php::before {
   width: 20%;
+  background-color: #11f367;
 }
 
 .skills .skills-content .right .sql::before {
   width: 10%;
+
+  background-color: #f73917;
 }
 
 /* teams section start */

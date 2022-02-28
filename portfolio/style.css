@@ -659,8 +659,35 @@ text-align: justify;
 
 
 
+/* footer styling */
 
 
+footer{
+  background-color: #111;
+  padding: 15px 0;
+}
+
+
+footer .footer-content{
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: pop;
+  font-size: 18px;
+  color: #fff;
+}
+
+footer .footer-content span{
+  color: #9457eb;
+  padding-right: 10px;
+}
+
+footer .footer-content i{
+  font-style: normal;
+
+  padding-left: 10px;
+}
 
 
 
@@ -794,6 +821,17 @@ text-align: justify;
   }
 }
 
+@media (max-width: 577px){
+ 
+
+footer .footer-content{
+ 
+  
+  font-size: 15px;
+}
+  
+}
+
 @media (max-width: 500px) {
   .home .home-content .text-2 {
     font-size: 50px;
@@ -801,6 +839,10 @@ text-align: justify;
 
   .home .home-content .text-3 {
     font-size: 27px;
+  }
+
+  footer .footer-content i{
+    display: block;
   }
 }
 

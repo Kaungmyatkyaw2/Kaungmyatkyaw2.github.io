@@ -114,6 +114,8 @@ nav .container ul.menu li a{
 
 	
 
+	
+
 	background:url(imgs/undraw_stripe_payments_re_chlm.svg);
 	background-repeat: no-repeat;
 	background-size: 400px;
@@ -248,7 +250,20 @@ nav .container ul.menu li a{
 	}
 
 	.home .text-1 span{
-		font-size: 27px;
+		font-size: 32px;
+	}
+
+	.home .text-1{
+		font-size: 25px;
+	}
+
+}
+
+@media(max-width:350px){
+
+
+	.home .text-1 span{
+		font-size: 32px;
 	}
 
 	.home .text-1{

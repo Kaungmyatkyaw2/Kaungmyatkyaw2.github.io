@@ -41,12 +41,40 @@
 
 section{
 	font-family: pop;
+	padding-top: 30px;
 }
 
 
 section .title{
-	font-family: ubuntu;
+	font-family: pop;
+	position: relative;
 }
+
+section .title::after{
+	content: '';
+	position: absolute;
+	bottom: -10px;
+	left: 50%;
+	transform: translate(-50%);
+	width: 80px;
+	height: 3px;
+	background-color: #11f367;
+
+}
+
+section .title::before{
+	content: '';
+	position: absolute;
+	bottom: -20px;
+	left: 50%;
+	transform: translate(-50%);
+	width: 150px;
+	height: 3px;
+	background-color: #9457eb;
+
+}
+
+
 
 
 /* navbar styling start */
@@ -56,6 +84,8 @@ nav{
 	box-shadow: 0 1px 15px 0 rgb(0 0 25 / 20%);
 	width: 100%;
 	position: fixed;
+
+	z-index: 999;
 }
 
 nav .container{
@@ -162,6 +192,152 @@ nav .container ul.menu li a{
 	color: #107dc0;
 }
 
+/* home sectin styling end */
+
+
+
+
+
+
+
+
+
+
+
+/* new section styling start */
+
+.new .container .title{
+	margin: 60px 0;
+	text-align: center;
+	font-family: pop;
+	letter-spacing: 4px;
+}
+
+.new .container .new-content{
+	display: flex;
+	justify-content: center;
+	align-self: center;
+}
+
+
+.new .container .new-content .slider{
+	width: 330px;
+	height: 330px;
+	border-radius: 10px;
+	overflow: hidden;
+	position: relative;
+
+
+}
+
+
+
+.new .container .new-content .slider .slides{
+
+	display: flex;
+	width: 500%;
+	height: 300px;
+
+	
+}
+
+.new .container .new-content .slider input{
+	display: none;
+}
+
+.new .container .new-content .slider .slides .card div{
+	text-align: center;
+	font-size: 23px;
+	font-family: big;
+	letter-spacing: 1px;
+	padding-bottom: 10px;
+
+}
+
+.new .container .new-content .slider .slides .card .name{
+	margin-top: 20px;
+}
+
+
+.new .container .new-content .slider .slides .card{
+	width: 20%;
+
+	transition: 1s;
+}
+
+
+.new .container .new-content .slider .slides .card img{
+	width: 310px;
+	object-fit: cover;
+	height: 177px;
+	text-align: center;
+	transform: translateX(3%);
+}
+
+.new .container .new-content .slider .navigation{
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	align-items: center;
+	height: 10px;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.new .container .new-content .slider .btn-manual{
+	
+	padding: 6px;
+	border: 2px solid #9457eb;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+
+.new .container .new-content .slider .btn-manual:hover{
+	background: #9457eb;
+}
+
+
+
+.new .container .new-content .slider .btn-manual:not(:last-child){
+	margin-right: 20px;
+}
+
+
+#radio1:checked ~ .first{
+	margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+	margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+	margin-left: -40%;
+}
+
+#radio4:checked ~ .first{
+	margin-left: -60%;
+}
+
+#radio5:checked ~ .first{
+	margin-left: -80%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -224,6 +400,12 @@ nav .container ul.menu li a{
 		font-size: 25px;
 	}
 
+
+	.home{
+		background: url(imgs/shoe.jpg);
+		background-size: cover;
+	}
+
 }
 
 
@@ -255,6 +437,15 @@ nav .container ul.menu li a{
 
 	.home .text-1{
 		font-size: 25px;
+	}
+
+	.new .container .new-content .slider{
+		width: 250px;
+		height: 350px;
+	}
+
+	.new .container .new-content .slider .slides .card img{
+		width: 250px;
 	}
 
 }

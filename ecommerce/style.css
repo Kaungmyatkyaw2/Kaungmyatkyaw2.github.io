@@ -492,6 +492,100 @@ nav .container ul.menu li a{
 }
 
 
+/* review sectin styling end */
+
+
+
+
+
+/* contact sectin styling start */
+
+.contact .contact-content{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.contact .contact-content .left{
+	width: 50%;
+}
+
+.contact .contact-content .right{
+	width: 50%;
+}
+
+.contact .contact-content .right iframe{
+	border-radius: 10px;
+}
+
+
+.contact .contact-content .sub-title{
+	font-size: 22px;
+	margin-bottom: 10px;
+}
+
+
+.contact .contact-content p{
+	margin-bottom: 13px;
+}
+
+.contact .contact-content .card{
+	display: flex;
+	align-items: center;
+
+	margin-bottom: 30px;
+}
+
+.contact .contact-content .card #address{
+	font-size: 23px;
+	color: #00ade1;
+}
+
+.contact .contact-content .card .info{
+	margin-left: 20px;
+}
+
+/* contact sectin styling end */
+
+
+
+/* footer section styling start */
+
+
+footer{
+	background-color: #111;
+	padding: 10px 0;
+  }
+  
+  
+  footer .footer-content{
+   
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: pop;
+	font-size: 18px;
+	color: #fff;
+  }
+  
+  footer .footer-content span{
+	color: #9457eb;
+	padding-right: 10px;
+  }
+  
+  footer .footer-content i{
+	font-style: normal;
+  
+	padding-left: 10px;
+  }
+  
+  
+
+/* footer section styling end */
+
+
+
+
 
 
 
@@ -518,6 +612,26 @@ nav .container ul.menu li a{
 		grid-template-columns: 1fr;
 		
 	}
+
+
+	.contact .contact-content{
+		flex-direction: column;
+	}
+
+	.contact .contact-content .left{
+		width: 100%;
+		margin-bottom: 30px;
+	}
+
+	.contact .contact-content .right{
+		width: 100%;
+	}
+
+	.contact .contact-content .right iframe{
+		width: 400px;
+		height: 400px;
+		border-radius: 0px;
+		}
 
 }
 
@@ -606,6 +720,16 @@ nav .container ul.menu li a{
 
 }
 
+@media (max-width: 577px){
+ 
+
+	footer .footer-content{
+	 
+	  
+	  font-size: 15px;
+	}
+	  
+	}
 
 @media(max-width:555px){
 
@@ -626,12 +750,23 @@ nav .container ul.menu li a{
 	}
 }
 
+@media(max-width:500px){
+	footer .footer-content i{
+		display: block;
+	  }
+}
 
 @media(max-width:487px){
 	.review .review-content .card{
 		flex-direction: column;
 		max-width: 300px;
 	}
+
+	.contact .contact-content .right iframe{
+		width: 300px;
+		height: 300px;
+		}
+
 }
 
 @media(max-width:390px){
@@ -656,6 +791,12 @@ nav .container ul.menu li a{
 	.new .container .new-content .slider .slides .card img{
 		width: 250px;
 	}
+
+	.contact .contact-content .right iframe{
+		width: 250px;
+		height:250px;
+		}
+
 
 }
 

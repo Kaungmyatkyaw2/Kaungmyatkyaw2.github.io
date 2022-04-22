@@ -56,7 +56,7 @@
 
 <!-- Home Section start -->
 
-<section class="home" id="home">
+<section class="home parallex" id="home">
 
 
 
@@ -443,6 +443,15 @@ $('.menu-btn i').toggleClass("active");
 
 
 })
+
+
+const parallax = document.getElementsByClassName('parallex')[0];
+
+window.addEventListener('scroll',function(){
+    let offset = this.window.pageYOffset;
+    parallax.style.backgroundPositionY = offset * 0.7 + 'px'
+})
+
 
 // let count = 20;
 

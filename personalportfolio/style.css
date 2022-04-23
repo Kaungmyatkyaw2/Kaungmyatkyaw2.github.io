@@ -1,0 +1,1073 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Baumans&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    list-style-type: none;
+    text-decoration: none;
+}
+
+
+/* similar code */
+
+section .title{
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    font-size: 40px;
+    letter-spacing: 2px;
+
+    text-align: center;
+
+    margin-bottom: 80px;
+
+}
+
+section{
+    padding: 100px 0;
+}
+
+.container{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+section .title{
+    position: relative;
+}
+
+section .title::before{
+    content: '';
+
+
+    background-color: #9457eb;
+
+    width: 90px;
+    height: 3px;
+
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+}
+
+
+section .title::after{
+    content: '';
+
+
+    background-color: #9457eb;
+
+    width: 150px;
+    height: 3px;
+
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+}
+/* navbar styling start */
+
+
+.menu-btn{
+    cursor: pointer;
+    z-index: 999;
+    color: white;
+    font-size: 25px;
+
+    display: none;
+}
+
+.nav-bar{
+    background: #292c34;
+    
+    position: fixed;
+    width: 100%;
+
+    z-index: 999;
+
+    padding: 20px 40px;
+}
+
+.nav-bar .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.nav-bar .logo{
+    font-size: 38px;
+    font-family: 'Big Shoulders Stencil Display', cursive;
+    letter-spacing: 1.5px;
+   
+    color: #107dc0;
+
+}
+
+
+.nav-bar .logo span{
+    color: #ffe01b;
+      font-family: 'Big Shoulders Stencil Display', cursive;
+}
+
+.nav-bar ul li{
+    display: inline-block;
+}
+
+.nav-bar ul li a{
+    margin-left: 30px;
+
+    font-weight: bold;
+    font-size: 18px;
+    font-family: 'Baumans';
+
+    color: rgb(255, 255, 255,0.9);
+
+    transition: all 0.1s ease;
+
+}
+
+
+.nav-bar ul li a:hover{
+    color: rgb(250, 84, 34,0.9);
+}
+
+
+
+/* navbar styling end */
+
+
+
+
+
+
+
+
+/* home section styling start*/
+
+.home .container {
+    margin: auto 0 auto 40px;
+    position: relative;
+  }
+
+.home{
+    height: 100vh;
+
+
+   
+    z-index: 1;
+
+    display: flex;
+
+
+    background: url('img/home-bg.svg') #292c34;
+
+    background-size: 550px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-x: 700px;
+
+
+    color: white;
+
+}
+
+
+.home .text-1,.text-3{
+    font-size: 27px;
+    font-family: Ubuntu;
+    font-weight: bold;
+
+    
+}
+
+.home .text-3{
+    font-size: 32px;
+    margin-bottom: 34px;
+}
+
+
+.home .text-3 span{
+    color: #11f367;
+}
+
+
+.home .text-2{
+    font-size: 63px;
+    font-family: Ubuntu;
+    font-weight: bold;
+
+    color: #292c34;
+
+    margin: 9px 0;
+
+    -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #ffe01b;
+
+}
+
+
+.home .home-content a{
+    padding: 9px 0;
+    display: inline-block;
+    width: 150px;
+    border: 3px solid #107dc0;
+    font-size: 20px;
+    border-radius:6px;
+    font-family: Poppins;
+    font-weight: bold;
+
+    text-align: center;
+
+    color: #fa5422;
+
+    position: relative;
+
+    z-index: 5;
+
+    overflow: hidden;
+
+}
+
+
+.home .home-content a::after{
+    content: '';
+
+    z-index: -1;
+
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+    top: 0;
+    left: -100%;
+
+  
+
+   background: #107dc0;
+
+    transition: all 0.3s ease;
+
+
+}
+
+
+
+
+.home .home-content a:hover::after{
+    left: 0;
+    width: 100%;
+    border-radius: 0px;
+}
+
+
+
+
+.home .container .icons{
+    /* display: grid;
+    grid-template-columns: 1fr; */
+    position: absolute;
+    bottom: -90px;
+    left: 50px;
+  }
+  
+  .home .container .icons i{
+    font-size: 28px;
+    margin-left: 30px;
+    cursor: pointer;
+
+    color: white;
+  
+    transition: all 0.3s ease;
+  }
+  
+  .home .container .icons i:hover{
+    color: #107dc0;
+    transform: scale(1.3);
+  
+    text-shadow:
+        0 0 92px #107dc0,
+        0 0 102px #107dc0,
+        0 0 151px #107dc0,
+        0 0 151px #107dc0
+  }
+  
+  
+  
+  .home .container .icons a{
+    color: white;
+  }
+
+
+
+
+/* home section styling end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* about section styling start */
+
+
+.about{
+    min-height: 100vh;
+    position: relative;
+    background-color: #fff;
+    z-index: 2;
+
+    font-family:Barlow;
+
+    background-color: #fff;
+}
+
+
+
+
+.about .title span{
+    font-size: 45px;
+    color: #9457eb;
+}
+
+.about .about-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about .left{
+    width: 45%;
+    display: flex;
+    justify-content: center;
+}
+
+.about .left img{
+
+    height: 350px;
+    width: 320px;
+    object-fit: cover;
+
+    border-radius: 10px;
+
+
+}
+
+
+.about .right{
+    width: 55%;
+}
+
+
+.about .right .title-right{
+    font-size: 34px;
+    letter-spacing: 3px;
+    font-family: 'Big Shoulders Stencil Display';
+    font-weight: bold;
+    margin-bottom: 20px;
+
+    position: relative;
+
+    display: inline-block;
+
+
+}
+
+/* 
+.about .right .title-right::after{
+    content: '';
+    width: 30px;
+    height: 10px;
+    border-radius: 5px;
+
+    background-color: tomato;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    animation-name: animate;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    opacity: 0;
+
+}
+
+@keyframes animate{
+
+    from{
+        opacity: 1;
+    }
+
+    80%{
+        opacity: 0;
+    }
+
+    to{
+        left: calc(100%);
+        opacity: 0;
+    }
+
+} */
+
+.about .right .head{
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Poppins';
+    margin-bottom: 12px;
+
+   
+}
+
+
+.about .right .head span{
+    color: transparent;
+
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #9457eb;
+}
+
+.about .right p{
+    font-size: 17px;
+    font-weight: 580;
+    margin-bottom: 16px;
+}
+
+
+.about .right .address{
+    padding: 9px 0;
+display: inline-block;
+width: 150px;
+border: 3px solid #9457eb;
+background-color: #9457eb;
+font-size: 18px;
+border-radius:6px;
+font-family: Poppins;
+font-weight: bold;
+
+text-align: center;
+
+color: white;
+
+position: relative;
+
+z-index: 5;
+
+margin-top: 15px;
+
+overflow: hidden;
+}
+
+/* about section styling end */
+
+
+
+
+
+
+/* skills styling start */
+
+.skills{
+    min-height: 100vh;
+    background: #292c34;
+}
+
+
+.skill-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skills .title{
+    color: white;
+}
+
+
+
+.skills .title::after,
+.skills .title::before{
+    background-color: #ffe01b;
+}
+
+
+.skills .left{
+    width: calc(60% - 13px);
+}
+
+.skills .right{
+    width: calc(40% - 13px);
+}
+
+
+.skills .right .box .text-box{
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: barlow;
+
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 7px;
+}
+
+.skills .right .box .bar{
+
+    display: inline-block;
+
+    width: 100%;
+    height: 5px;
+
+    border-radius: 3px;
+            
+    position: relative;
+
+
+    margin-bottom: 22px;
+
+
+    background-color: #d3d3d3;
+}
+
+.skills .right .box .bar::before{
+    content: '';
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+
+    height: 100%;
+    width: 90%;
+
+    background-color: #9457eb;
+
+}
+
+.skills .right .box .css::before{
+width: 75%;
+background-color: #11f367;
+}
+
+.skills .right .box .js::before{
+    width: 65%;
+    background-color: #107dc0;
+    }
+
+
+    .skills .right .box .php::before{
+        width: 10%;
+        background-color: #ffe01b;
+        }
+
+        .skills .right .box .ai::before{
+            width: 60%;
+            background-color: #fa5422;
+            }
+        
+
+
+
+
+
+
+
+
+
+            .skills .left{
+                color: #fff;
+            }
+         
+
+
+
+          
+            .skills .left .card-box{
+                display: flex;
+
+                width: 87%;
+            }
+
+
+
+
+            .skills .left .card-box .card{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                width: 200px;
+
+
+                position: relative;
+                
+            }
+
+.skills .left .card-box .card svg,
+.skills .left .card-box .card i{
+    font-size: 24px;
+    color: #d8d4d4;
+
+    margin-bottom: 7px;
+
+ 
+
+    text-align: center;
+}
+
+
+.skills .left .card-box .card .middle{
+    font-size: 18px;
+    color: #ffe01b;
+
+    text-align: center;
+
+    font-weight: bold;
+
+
+    margin-bottom: 7px;
+
+    margin: 0px;
+
+}
+
+
+.skills .left .card-box .card .bottom{
+    font-size: 16px;
+
+    text-align: center;
+
+    margin: 0px;
+
+    color: #d8d4d4;
+}
+
+
+.skills .left p{
+    font-size: 18px;
+    font-weight: 580;
+    margin-bottom: 36px;
+
+
+    width: 87%;
+
+    text-align: justify;
+
+    word-spacing: 2px;
+
+    line-height: 26px;
+
+    font-family: barlow;
+}
+    
+    
+
+
+
+.skills .left .title-right{
+    font-size: 34px;
+    letter-spacing: 3px;
+    font-family: 'Big Shoulders Stencil Display';
+    font-weight: bold;
+    margin-bottom: 20px;
+
+    position: relative;
+
+    display: inline-block;
+
+
+    background:linear-gradient(130deg,#fa5422 50%,#11f367 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+
+}
+
+
+
+
+.skills .left .title-right span{
+    
+    background:linear-gradient(130deg,#fa5422 50%,#11f367 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.skills .left .title-right span:nth-child(2){
+    
+    background:linear-gradient(130deg,#fa5422 50%,#11f367 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+
+
+/* skills styling end */
+
+
+
+
+
+
+
+
+
+
+/* responsive styling start */
+
+@media (max-width:1065px){
+
+
+    .skills .skill-content{
+        flex-direction: column;
+
+        justify-content: normal;
+        align-items: normal;
+    }
+
+
+
+
+    .skills .column{
+        width: 100%;
+    }
+
+
+    .skills .right{
+        width: 70%;
+
+        margin-top: 90px;
+    }    
+
+}
+
+
+@media (max-width: 1104px) {
+
+
+    .about .about-content .left{
+        justify-content: space-between;
+        margin-bottom: 80px;
+    }
+
+
+    .about .about-content .left img {
+      height: 330px;
+      width: 330px;
+    }
+
+    .about .about-content .right{
+        padding-left: 10px;
+    }
+
+  }
+  
+
+  @media (max-width: 977px) {
+
+    
+    .about .about-content .left{
+        justify-content: center;
+    }
+
+    .about-content{
+        flex-direction: column;
+    }
+
+    .about-content .column{
+        width: 100%;
+    }
+
+  }
+
+@media (max-width:915px) {
+
+    .menu-btn{
+        display: block;
+    }
+
+
+    .nav-bar ul{
+
+        width: 100%;
+        
+
+        padding-bottom: 20px;
+
+        box-shadow: 0 1px 10px 0 rgb(0 0 25 / 20%);
+
+
+
+        position: fixed;
+        top: -100%;
+        left: 0;
+
+
+        z-index: -1;
+
+        text-align: center;
+        background-color: #292c34;
+
+        padding-top: 50px;
+        
+        transition: all 0.5s ease;
+
+  
+    }
+
+    .nav-bar ul.active{
+        top: 0;
+    }
+
+    .nav-bar ul li{
+        display: block;
+     }
+
+     .nav-bar ul li a{
+         display: inline-block;
+         
+         margin-left: 0;
+         font-size: 20px;
+         padding-top: 25px;
+     }
+
+.home .container,
+.about .container{
+        padding: 0 20px;
+    }
+
+
+  .skills .right{
+      width: 90%;
+  }
+
+
+        }
+
+
+@media (max-width:880px) {
+    .container{
+        max-width: 880px;
+    }
+
+    .home .container {
+        padding-left: 60px;
+    }
+
+    .home .container .icons{
+        display: grid;
+        grid-template-columns: 1fr;
+        position: absolute;
+        top: 0px;
+        left: -50px;
+      }
+
+}
+
+
+
+
+@media (max-width:807px) {
+    .skills .container{
+        padding: 20px 60px;
+    }
+}
+
+
+@media (max-width:717px) {
+    .skills .container{
+        padding: 20px 30px;
+    }
+}
+
+@media (max-width:624px){
+    .home .container{
+        padding-left: 0px;
+    }
+
+    .home .container .icons{
+        display: block;
+        position: absolute;
+        top: 250px;
+        left: -30px;
+        margin-top: 30px;
+      }
+
+}
+
+@media (max-width:600px){
+    .home .text-2{
+        font-size:53px;
+    }
+
+    .home .text-3{
+        font-size: 29px;
+    }
+
+}
+
+@media (max-width:572px){
+   
+    
+}
+
+
+@media (max-width:498px){
+
+
+    .container{
+        padding: 0px;
+    }
+    
+    .home .text-2{
+        font-size: 50px;
+    }
+
+    .home .text-3{
+        font-size: 27px;
+    }
+
+    .skills .left p,
+    .skills .left .card-box{
+        width: 100%;
+    }
+
+    .skills .left .card-box .card:nth-child(1){
+        display: none;
+    }
+
+}
+
+@media (max-width:485px) {
+    .home .container {
+        margin: auto 0 auto 20px;
+          }
+}
+
+@media (max-width:452px){
+    .home .text-1{
+        font-size: 22px;
+    }
+
+    .home .text-2{
+        font-size: 43px;
+    }
+
+    .home .text-3{
+        font-size: 23px;
+    }
+
+
+    .about .about-content .title-right{
+        font-size: 28px;
+    }
+
+    .about .about-content .head{
+        font-size: 23px;
+    }
+
+
+    
+    
+
+}
+
+@media (max-width:445px){
+    .home .container .icons{
+        margin-top: 19px;
+    }
+
+  
+
+}
+
+
+@media (max-width:433px){
+    
+
+    .about .about-content .head{
+        font-size: 21px;
+    }
+  
+
+}
+
+
+
+
+
+@media (max-width:419px){
+
+    .home .container .icons{
+        margin-top: 8px;
+    }
+
+    .home .text-1{
+        font-size: 20px;
+    }
+
+    .home .text-2{
+        font-size: 36px;
+    }
+
+    .home .text-3{
+        font-size: 22px;
+    }
+
+
+    .skills .left .card-box .card:nth-child(4){
+        display: none;
+    }
+
+}
+
+@media (max-width:393px) {
+    
+    .about .about-content .head{
+        font-size: 18px;
+    }
+
+}
+
+
+@media (max-width:349px) {
+    
+    .about .about-content .head{
+        font-size: 18px;
+    }
+
+}
+
+
+/* responsive styling end */

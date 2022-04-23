@@ -764,10 +764,11 @@ background-color: #11f367;
     }
 
 
-    .skills .right{
-        width: 70%;
 
-        margin-top: 90px;
+
+    .skills .right{
+        width: 85%;
+        margin-top: 60px;
     }    
 
 }

@@ -742,9 +742,151 @@ background-color: #11f367;
 
 
 
+/* recent work styling start */
+
+
+.recent-work .content{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows:1fr 1fr;
+    grid-row-gap: 60px;
+
+    place-items: center;
+}
+
+.recent-work .card-box{
+    width: 300px;
+    height: 240px;
+    position: relative;
+
+    border-radius: 6px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    
+}
+
+
+
+.recent-work .card-box img{
+
+    display: inline-block;
+
+    object-fit: cover;
+
+
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+
+.recent-work .card-box .overlay{
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 888;
+
+    background-color: rgba(0.5, 0.5,0.5, 0.8);
+
+transition: all 0.2s ease;
+
+}
+
+
+.recent-work .card-box:hover .overlay{
+    width: 100%;
+    height: 100%;
+
+    opacity: 1;
+
+
+}
+
+
+.recent-work .card-box .text-box{
+
+
+  
+
+
+    transform: translateY(20px);
+    opacity: 0;
+
+    position: absolute;
+    left: 10px;
+    bottom: 20px;
+
+    
+    padding-left: 10px;
+
+
+    transition: all 0.3s  ease;
+
+
+    color: white;
+    font-size: 23px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-family: 'Big Shoulders Stencil Display';
+    
+    z-index: 988;
+
+}
+
+
+
+.recent-work .card-box p:nth-child(2){
+    font-size: 19px;
+    margin-top: 5px;
+}
+
+
+
+.recent-work .card-box p a{
+    color: #107dc0;
+}
+
+.recent-work .card-box:hover .text-box{
+    opacity:1;
+    transform: translateY(0);
+}
+
+
+
+
+
+
+/* recent work starting end */
+
+
+
+
+
+
+
 
 
 /* responsive styling start */
+
+
+@media (max-width:1280px){
+    .recent-work .content{
+        grid-template-columns: 1fr 1fr;
+    }
+}
 
 @media (max-width:1065px){
 
@@ -897,7 +1039,11 @@ background-color: #11f367;
 }
 
 
-
+@media (max-width:817px){
+    .recent-work .content{
+        grid-template-columns: 1fr;
+    }
+}
 
 @media (max-width:807px) {
     .skills .container{

@@ -873,6 +873,176 @@ transition: all 0.2s ease;
 
 
 
+#services{
+    background-color: #292c34;
+    min-height: 100vh;
+}
+
+#services .title{
+    color: #fff;
+
+    margin-bottom: 120px;
+}
+
+#services .title::after{
+    background-color: #107dc0;
+}
+
+#services .title::before{
+    background-color: #107dc0;
+}
+
+#services .content{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+}
+
+#services .content .card-box{
+    width: 270px;
+    height:280px;
+    background-color: #fff;
+
+    border-radius: 7px;
+
+    color: #fa5422;
+    font-weight: bold;
+    font-family: poppins;
+
+
+    position: relative;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+#services .content .card-box .icon::before{
+
+
+    content: "";
+
+    background-color: #fff;
+
+
+    z-index: -2;
+
+    width: 60%;
+    height: 60%;
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    transform: translate(-50%,35%);
+
+    border-radius: 50%;
+}
+
+#services .content .card-box .icon{
+    width: 80px;
+    height: 80px;
+
+    border-radius: 50%;
+
+
+    z-index: 666;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #292c34;
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    transform: translate(-50%,-50%);
+
+}
+
+
+#services .content .card-box .icon i
+{
+    font-size: 26px;
+}
+
+
+#services .content .card-box .paragraph{
+
+    font-weight: 500;
+
+    color: #292c34;
+
+    width: 97%;
+
+    text-align: center;
+
+}
+
+
+#services .content .card-box .title-box{
+
+    font-size: 19px;
+
+    color: #292c34;
+
+    position: relative;
+
+    margin-bottom: 27px;
+}
+
+
+#services .content .card-box .title-box::before{
+    content: '';
+
+    position: absolute;
+    top: -9px;
+    left: -15px;
+
+    width: 18px;
+    height: 13px;
+
+    
+
+    border-left: 4px solid #107dc0;
+    border-top: 4px solid #107dc0;
+}
+
+
+
+#services .content .card-box .title-box::after{
+    content: '';
+
+    position: absolute;
+    bottom: -9px;
+    right: -15px;
+
+    width: 18px;
+    height: 13px;
+
+    
+
+    border-bottom: 4px solid #107dc0;
+    border-right: 4px solid #107dc0;
+}
+
+
+
+/* service styling start */
+
+
+
+
+
+
+
+
+/* service styling end */
 
 
 
@@ -889,6 +1059,16 @@ transition: all 0.2s ease;
 }
 
 @media (max-width:1065px){
+
+
+    #services .content{
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    #services .content .card-box:nth-child(3){
+        margin-top: 70px;
+    }
 
 
     .skills .skill-content{
@@ -1052,10 +1232,24 @@ transition: all 0.2s ease;
 }
 
 
+@media (max-width:771px){
+    #services .content{
+        grid-template-columns: 1fr
+        }
+
+
+    #services .content .card-box:nth-child(1){
+        margin-bottom: 70px;
+    }
+
+}
+
 @media (max-width:717px) {
     .skills .container{
         padding: 20px 30px;
     }
+
+
 }
 
 @media (max-width:624px){

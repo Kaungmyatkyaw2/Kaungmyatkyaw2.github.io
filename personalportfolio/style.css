@@ -900,7 +900,7 @@ transition: all 0.2s ease;
 
 #services .content .card-box{
     width: 270px;
-    height:280px;
+    height:250px;
     background-color: #fff;
 
     border-radius: 7px;
@@ -920,10 +920,18 @@ transition: all 0.2s ease;
 }
 
 
+
+
+
+
+
 #services .content .card-box .icon::before{
 
 
+
     content: "";
+
+    transition: all 0.3s ease;
 
     background-color: #fff;
 
@@ -942,12 +950,21 @@ transition: all 0.2s ease;
     border-radius: 50%;
 }
 
+
 #services .content .card-box .icon{
     width: 80px;
     height: 80px;
 
     border-radius: 50%;
 
+
+transition: all 0.4s ease;
+
+
+    transform: translateY(-60%);
+
+
+    position: relative;
 
     z-index: 666;
 
@@ -957,11 +974,8 @@ transition: all 0.2s ease;
 
     background-color: #292c34;
 
-    position: absolute;
-    top: 0;
-    left: 50%;
-
-    transform: translate(-50%,-50%);
+ 
+  text-align: center;
 
 }
 

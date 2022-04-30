@@ -9,6 +9,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@300&display=swap');
 
+@import url("https://db.onlinewebfonts.com/c/771d2a89fb0fc4c6f7942f46f6790e09?family=Consolas");
 
 @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Display&display=swap');
 
@@ -141,6 +142,8 @@ section .title::after{
     font-weight: bold;
     font-size: 18px;
     font-family: 'Baumans';
+
+
 
     color: rgb(255, 255, 255,0.9);
 
@@ -1283,6 +1286,196 @@ transition: all 0.4s ease;
 
 
 
+/* contact section styling start */
+
+
+
+
+
+.contact{
+    background-color: #292c34;
+}
+
+.contact .title{
+    color: #fff;
+}
+
+.contact .content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact .content .column{
+    width: calc(50% - 20px);
+}
+
+.contact .left .title-left{
+    font-weight: bold;
+    font-size: 23px;
+    font-family: poppins;
+}
+
+.contact .left p{
+    color: #fff;
+}
+
+
+.contact .left p{
+    margin: 23px 0;
+    font-family: ubuntu;
+}
+
+
+.contact .left .box{
+    font-family: 'Consolas';
+    font-weight: bold;
+}
+
+.contact .left .box .top{
+    color: #10c8ed;
+}
+
+.contact .left .box p{
+    margin-bottom: 10px;
+}
+
+.contact .left .box p .front{
+    color: #f92672;
+    padding-right: 5px;
+}
+
+.contact .left .box p .back{
+ 
+    padding-left: 5px;
+    color: #a6e22e;
+}
+
+.contact .left .box .code{
+    margin-left: 28px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.contact .right form .fields{
+    display: flex;
+  }
+  
+  .contact .right form .field,
+  .contact .right form .fields  .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .contact .right form .textarea{
+    height: 80px;
+    width: 100%;
+  }
+  
+  .contact .right form .name{
+    margin-right: 10px;
+  }
+  
+  .contact .right form .email{
+    margin-left: 10px;
+  }
+  
+  .contact .right form .field input,
+  .contact .right form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    color: #fff;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: poppins;
+    background-color: #292c34;
+    caret-color: #fff;
+  }
+  
+  
+  .contact .right form .textarea textarea{
+    padding-top: 10px;
+    resize: none;
+  }
+  
+  .contact .right form .button{
+    height: 47px;
+    width: 170px;
+  }
+  
+  .contact .right form .button button{
+    width: 100%;
+    height: 100%;
+    border:2px solid #10c8ed;
+    background: #10c8ed;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: all 1s ease;
+  }
+  
+  .contact .right form .button button:hover{
+    color: #10c8ed;
+    background: none;
+  }
+  
+  
+  .contact .right .text{
+      font-family: poppins;
+      
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+
+
+    background:linear-gradient(30deg,#a6e22e 0%,#f92672 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+
+
+
+
+
+
+
+
+/* contact styling styling end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1387,6 +1580,23 @@ transition: all 0.4s ease;
   }
 
 @media (max-width:915px) {
+
+
+
+    .contact .content{
+        flex-direction: column;
+    }
+
+   
+.contact .content .column{
+    width: 100%;
+   
+}
+
+.contact .content .column:nth-child(1){
+    margin-bottom: 60px;
+}
+
 
     .menu-btn{
         display: block;
@@ -1494,6 +1704,11 @@ transition: all 0.4s ease;
         margin-bottom: 70px;
     }
 
+
+    .contact .container{
+        padding-left: 30px;
+    }
+
 }
 
 @media (max-width:717px) {
@@ -1574,6 +1789,10 @@ transition: all 0.4s ease;
 
     .container{
         padding: 0px;
+    }
+
+    .contact .container{
+        padding: 20px;
     }
     
     .home .text-2{
@@ -1687,11 +1906,29 @@ transition: all 0.4s ease;
 }
 
 
+
+@media (max-width:387px) {
+    .contact .left .box p{
+        font-size: 15px;
+    }
+
+    .contact .left .box .code{
+        margin-left: 20px;
+    }
+    
+}
+
 @media (max-width:349px) {
     
     .about .about-content .head{
         font-size: 18px;
     }
+
+
+    .contact .left .box .code{
+        margin-left: 5px;
+    }
+    
 
 }
 

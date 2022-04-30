@@ -1469,6 +1469,47 @@ transition: all 0.4s ease;
 
 
 
+/* footer styling */
+
+
+footer{
+    background-color: #111;
+    padding: 15px 0;
+  }
+  
+  
+  footer .footer-content{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: poppins;
+    font-size: 18px;
+    color: #fff;
+  }
+  
+  footer .footer-content span{
+    color: #9457eb;
+    padding-right: 10px;
+  }
+  
+  footer .footer-content i{
+    font-style: normal;
+  
+    padding-left: 10px;
+  }
+  
+  
+  
+  
+  /*foot styling start  */
+
+
+
+
+
+
+
 
 
 
@@ -1578,6 +1619,32 @@ transition: all 0.4s ease;
     }
 
   }
+
+
+
+@media (max-width: 577px){
+ 
+
+    footer .footer-content{
+     
+      
+      font-size: 15px;
+    }
+  
+}
+
+
+
+
+@media (max-width: 500px) {
+
+  
+    footer .footer-content i{
+      display: block;
+    }
+  }
+
+
 
 @media (max-width:915px) {
 

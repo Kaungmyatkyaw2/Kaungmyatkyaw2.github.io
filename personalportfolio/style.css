@@ -1107,6 +1107,18 @@ transition: all 0.4s ease;
 /* review styling start */
 
 
+
+#review .title span{
+    color: #d313fa;
+}
+
+
+#review .title::before,
+#review .title::after{
+    background-color: #d313fa;
+}
+
+
 #review .content{
     display: flex;
     justify-content: center;
@@ -1300,6 +1312,19 @@ transition: all 0.4s ease;
     color: #fff;
 }
 
+
+.contact .title span{
+    color: #10c8ed;
+}
+
+
+.contact .title::before,
+.contact .title::after{
+    background-color: #10c8ed;
+}
+
+
+
 .contact .content{
     display: flex;
     justify-content: space-between;
@@ -1435,16 +1460,19 @@ transition: all 0.4s ease;
   
   
   .contact .right .text{
-      font-family: poppins;
+      font-family: 'Big Shoulders Stencil Display';
       
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 32px;
+
+    letter-spacing: 2px;
+    
+    color: #11f367;
+
     margin-bottom: 10px;
 
 
-    background:linear-gradient(30deg,#a6e22e 0%,#f92672 50%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+   
+ 
   }
 
 

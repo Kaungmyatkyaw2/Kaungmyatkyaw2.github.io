@@ -28,3 +28,31 @@ document.querySelectorAll('#sth').forEach(archor => {
     })
 })
 
+
+ScrollReveal({
+    reset:true,
+    distance:'100px',
+    duration:1800,
+    delay:0
+});
+
+ScrollReveal().reveal('.title',{delay:100,origin:'left'});
+
+ScrollReveal().reveal('.about .left img',{delay:250 , origin : 'bottom',distance:'100px',duration:1200})
+
+ScrollReveal().reveal('.about .right div',{delay:230 , origin : 'left',distance:'60px',duration:1200})
+
+ScrollReveal().reveal('.about .right p',{delay:230 , origin : 'top',distance:'60px',duration:1200,interval:30})
+
+ScrollReveal().reveal('.about .right a',{delay:230 , origin : 'top',distance:'60px',duration:1200,interval:30})
+
+
+ScrollReveal().reveal('.skills .left .card-box .card',{delay:230 , origin : 'top',distance:'50px',duration:1200,interval:200})
+
+ScrollReveal().reveal('.skills .left .title-right',{delay:230 , origin : 'top',distance:'50px',duration:1200,interval:200})
+
+ScrollReveal().reveal('.skills .left p',{delay:230 , origin : 'top',distance:'50px',duration:1200,interval:50})
+
+ScrollReveal().reveal('.skills .right .box',{delay:230 , origin : 'left',distance:'70px',duration:1200,interval:300})
+
+

@@ -24,6 +24,21 @@
 }
 
 
+
+::-webkit-scrollbar{
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track{
+    background-color: #333;
+  }
+  
+  ::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background-color: #9457eb;
+  }
+
+
 /* similar code */
 
 section .title{
@@ -377,12 +392,12 @@ section .title::after{
 
 .about .left img{
 
-    height: 350px;
-    width: 320px;
+    height: 370px;
+    width: 350px;
     object-fit: cover;
 
     border-radius: 10px;
-
+    
 
 }
 

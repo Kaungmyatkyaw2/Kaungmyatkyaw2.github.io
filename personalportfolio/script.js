@@ -30,7 +30,7 @@ document.querySelectorAll('#sth').forEach(archor => {
 
 
 ScrollReveal({
-    reset:true,
+    reset:false,
     distance:'100px',
     duration:1800,
     delay:0
@@ -56,3 +56,34 @@ ScrollReveal().reveal('.skills .left p',{delay:230 , origin : 'top',distance:'50
 ScrollReveal().reveal('.skills .right .box',{delay:230 , origin : 'left',distance:'70px',duration:1200,interval:300})
 
 
+
+ScrollReveal().reveal('.home .container .icons i',{delay:230 , opacity:0, origin : 'bottom',distance:'70px',duration:1700,interval:300})
+
+
+ScrollReveal().reveal('.home .text-1',{delay:230 , opacity:0, origin : 'bottom',distance:'70px',duration:1700,interval:300})
+
+ScrollReveal().reveal('.home .text-2',{delay:380 , opacity:0, origin : 'bottom',distance:'70px',duration:1700,interval:300})
+
+ScrollReveal().reveal('.home .text-3',{delay:430 , opacity:0, origin : 'bottom',distance:'70px',duration:1700,interval:300})
+
+ScrollReveal().reveal('.home .home-content a',{delay:530 , opacity:0, origin : 'bottom',distance:'70px',duration:1700,interval:300})
+
+
+
+
+ScrollReveal().reveal('.recent-work .card-box',{delay:230 , opacity:0, origin : 'bottom',distance:'70px',duration:1700,interval:300})
+
+
+
+ScrollReveal().reveal('#services .content .card-box',{delay:230 , opacity:0, origin : 'bottom',distance:'70px',duration:1700,interval:300})
+
+ScrollReveal().reveal('#review .content .slider .slides',{delay:230 , opacity:0, origin : 'top',distance:'70px',duration:1700,interval:300})
+
+
+ScrollReveal().reveal('.contact .left .title-left',{delay:230 , opacity:0, origin : 'left',distance:'70px',duration:1700,interval:300})
+
+
+ScrollReveal().reveal('.contact .left p',{delay:290 , opacity:0, origin : 'left',distance:'70px',duration:1700,interval:300})
+
+
+ScrollReveal().reveal('.contact .right',{delay:230 , opacity:0, origin : 'bottom',distance:'70px',duration:1700,interval:300})

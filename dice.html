@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
+</head>
+<style>
+    body{
+        background:linear-gradient(150deg,white 50%,tomato 50%);
+        height: 99vh;
+    }
+
+    .max-width{
+        max-width: 1300px;
+        margin: auto;
+    }
+
+    .result{
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: aquamarine;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .result-active{
+        top: 0;
+    }
+
+    @media screen and (max-width:530px){
+
+
+        .container{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+</style>
+<body>
+
+
+    <div class="max-width">
+
+ 
+        <h1 class="text-primary text-center mt-3">Dice Game</h1>
+
+
+        <button class="btn btn-danger rounded rounded-2 mx-auto my-5 d-block"><i class="fa-solid fa-arrow-rotate-left"></i>New Game</button>
+          
+       
+           <div class="container bg-light p-5 px-2 rounded rounded-2 shadow-lg my-5">
+               <div class="row justify-content-center">
+
+                   <div class="col-lg-5 col-9 text-center">
+                       <h2 class="text-danger text-center ">Player1</h3>
+                       <img src="./dice-imgs/dice-01.svg" id="player1" style="width:200px;height: 230px;" alt="">
+                       <h2>Score : <span id="score1" class="badge bg-primary">0</span></h2>
+                   </div>
+       
+                   <button class="btn btn-primary col-9 col-lg-2 d-inline-block my-5 my-lg-auto" id="rolling-dice" style="height: 50px;">Roll Dice</button>
+       
+                   <div class="col-lg-5 col-9 text-center">
+                       <h2 class="text-danger text-center ">Player2</h3>
+                       <img src="./dice-imgs/dice-01.svg" id="player2" style="width:200px;height: 230px;" alt="">
+                       <h2>Score : <span id="score2" class="badge bg-primary">0</span></h2>
+                   </div>
+                   
+               </div>
+               
+           </div>
+       
+           <div class="result">
+            <h1 id="result-display">Draw!!!!</h1>
+
+            <button class="btn btn-warning" id="reset-btn">Play Again</button>
+            
+        </div>
+    </div>
+
+    <script>
+
+        let roller = document.querySelector('#rolling-dice');
+
+            roller.addEventListener('click',() => {
+               let randomNum1 = Math.random() * 6 + 1;
+               let randomNum2 = Math.random() * 6 + 1;
+
+                let formattedNum1 = Math.floor(randomNum1);
+                let formattedNum2 = Math.floor(randomNum2);
+
+                let score1 = document.querySelector('#score1');
+                let score2 = document.querySelector('#score2');
+
+                let formattedScore1 = Number(score1.innerHTML);
+                let formattedScore2 = Number(score2.innerHTML);
+
+                console.log(score1);
+                
+
+                let player1Image = document.querySelector('#player1');
+                let player2Image = document.querySelector('#player2');
+
+                player1Image.src = `./dice-imgs/dice-0${formattedNum1}.svg`;
+                player2Image.src = `./dice-imgs/dice-0${formattedNum2}.svg`;
+
+
+                  score1.innerHTML = formattedScore1 += formattedNum1;
+                  score2.innerHTML = formattedScore2 += formattedNum2;
+
+                  if(formattedScore1 >= 50 && formattedScore2 < 50){
+                      document.querySelector('#result-display').innerHTML = 'Player 1 WIN!';
+                      document.querySelector('.result').classList.toggle('result-active');
+                      document.querySelectorAll('button')[1].setAttribute('disabled',"");
+                  } if(formattedScore2 >= 50 && formattedScore1 < 50){
+                      document.querySelector('.result').classList.toggle('result-active');
+                      document.querySelector('#result-display').innerHTML = 'Player 2 WIN!';
+                      document.querySelectorAll('button')[1].setAttribute('disabled',"");
+
+                  }else if((formattedScore2 == 50 && formattedScore1 == 50) || (formattedScore2 > 50 && formattedScore1 > 50)){
+                      document.querySelector('.result').classList.toggle('result-active');
+                      document.querySelector('#result-display').innerHTML = 'Draw!!!';
+                      document.querySelectorAll('button')[1].setAttribute('disabled',"");
+
+                  }
+
+                
+            });
+
+            let resetBtn = document.querySelectorAll('button')[0];
+            let playAgain = document.querySelector('#reset-btn');
+
+            console.log(resetBtn.innerHTML);
+
+            resetBtn.addEventListener('click',resetFunction);
+            playAgain.addEventListener('click',playAgainFunction);
+
+            function resetFunction(){
+
+let score1 = document.querySelector('#score1');
+let score2 = document.querySelector('#score2');
+
+score1.innerHTML = 0
+score2.innerHTML = 0;
+
+document.querySelectorAll('button')[1].removeAttribute('disabled');
+document.querySelector('h1').innerHTML = 'Dice Game';
+
+
+
+};
+
+
+function playAgainFunction(){
+
+let score1 = document.querySelector('#score1');
+let score2 = document.querySelector('#score2');
+
+score1.innerHTML = 0
+score2.innerHTML = 0;
+
+document.querySelectorAll('button')[1].removeAttribute('disabled');
+document.querySelector('h1').innerHTML = 'Dice Game';
+document.querySelector('.result').classList.toggle('result-active');
+
+
+
+};
+
+
+
+  
+
+    </script>
+
+</body>
+
+
+</html>

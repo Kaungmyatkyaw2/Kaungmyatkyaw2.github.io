@@ -1,0 +1,24 @@
+
+
+
+#home{
+
+    height: 104vh;
+    background: url('./imgs/home-bg.jpg');
+    background-size: cover;
+
+}
+ 
+.search{
+    background-color: rgba(78, 78, 78, 0.3);
+    caret-color: aliceblue;
+}
+
+.search:focus{
+    background-color: rgba(78, 78, 78, 0.3);
+    caret-color: aliceblue;
+}
+
+.navbar-second{
+    background-color: rgba(78, 78, 78, 0.3);
+}

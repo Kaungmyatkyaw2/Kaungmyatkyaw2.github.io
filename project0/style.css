@@ -1,12 +1,36 @@
-
-
-
 #home{
 
     height: 104vh;
-    background: url('./imgs/home-bg.jpg');
+    background: url('./imgs/home-bg.jpg') rgba(0, 0, 0, 0.6);;
     background-size: cover;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+nav{
+    z-index: 1000;
+}
+
+.navbar-second{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#about,#card{
+    min-height: 100vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgb(42,38,117);
+    background: linear-gradient(310deg, rgba(42,38,117,1) 43%, rgba(51,214,247,1) 100%);
+
+    padding: 50px 0; 
+
+    z-index: -1;
 }
  
 .search{
@@ -19,6 +43,33 @@
     caret-color: aliceblue;
 }
 
-.navbar-second{
-    background-color: rgba(78, 78, 78, 0.3);
+.img{
+    width: 500px;
+}
+
+.para{
+
+    color: rgb(27, 24, 24);
+    font-size: 14.6px;
+
+}
+
+
+@media (max-width:512px) {
+    #about img{
+        width: 450px;
+    }
+}
+
+
+@media (max-width:450px) {
+    #about img{
+        width: 350px;
+    }
+}
+
+@media (max-width:350px) {
+    #about img{
+        width: 330px;
+    }
 }

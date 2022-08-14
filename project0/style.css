@@ -18,7 +18,7 @@ nav{
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-#about,#card{
+#about,#card,#question{
     min-height: 100vh;
     
     display: flex;
@@ -31,6 +31,8 @@ nav{
     padding: 50px 0; 
 
     z-index: -1;
+
+        
 }
  
 .search{
@@ -53,6 +55,20 @@ nav{
     font-size: 14.6px;
 
 }
+
+
+.card{
+
+    backdrop-filter: blur(1rem);
+    
+
+}
+
+.cb1{
+    background-color: rgba(225,225,225,0.2);
+}
+
+
 
 
 @media (max-width:512px) {

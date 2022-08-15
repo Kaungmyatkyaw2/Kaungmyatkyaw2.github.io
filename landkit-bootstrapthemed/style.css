@@ -1,4 +1,9 @@
-#home,#contact{
+@font-face {
+    font-family: HK Grotesk;
+    src: url('./fonts/HKGrotesk-Regular.otf');
+}
+
+#home{
     min-height: 84vh;
     display: flex;
     justify-content: center;
@@ -8,6 +13,22 @@
 }
 
 
+#contact{
+    min-height: 120vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+.input-form::placeholder{
+    color: rgba(80,102,144);
+    font-size: 17px;
+    padding: 0;
+    transform: translate(-10px);
+}
 
 
 .home-title{
@@ -44,6 +65,43 @@
     font-size: 17px;
 }
 
+
+.c-text{
+    color: #869ab8;
+    font-size: 19px;
+}
+
+
+.c-custom{
+    width: 360px;
+}
+
+
+
+.box{
+    background-color: rgba(66, 186, 150, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+}
+
+.hkg{
+    padding: 14px 40px;
+    font-size: 17px;
+    font-family:HK Grotesk;
+}
+
+.f-hkg{
+    font-family: HK Grotesk;
+}
+
+.title-contact{
+    font-size: 31px;
+}
+
 @media (max-width:1023px) {
     .home-title{
         font-size: 36px;
@@ -70,6 +128,11 @@
     /* color: rgb(134, 154, 184); */
 }
    
+
+.title-contact{
+    font-size: 24px;
+}
+
     
 }
 
@@ -78,6 +141,11 @@
     /* #home{
         margin-top: 200px;
     } */
+
+
+    .c-custom{
+        width: 74%;
+    }
 
     #home img{
         height: auto;
@@ -111,4 +179,10 @@
     .card{
         padding-left: 10px;
     }
+
+
+    .c-custom{
+        width: 98%;
+    }
+
 }

@@ -1,24 +1,25 @@
 // @import url(//db.onlinewebfonts.com/c/9897812c6013649bd7a0c3d2efb4c834?family=HK+Grotesk);
-
+@import url(//db.onlinewebfonts.com/c/410c367a12c3efa4acda25c5d48e9abb?family=HK+Grotesk+Light);
 
 @font-face {
     font-family: HK Grotesk;
     src: url('../fonts/HKGrotesk-Regular.otf');
 }
 
-@font-face {
-    font-family: HK Grotesk_Light;
-    src: url('../fonts/HKGrotesk-Light.otf');
-}
+// @font-face {
+//     font-family: "HKGrotesk_Light";
+//     src: url('../fonts/HKGrotesk-Light.otf');
+// }
 
 
 $primary : #335EEA;
 $navbar-light-color : white;
-// $font-family-sans-serif : HK Grotesk_Light;
+// $font-family-sans-serif : HKGrotesk_Light;
 $success : rgba(80,102,144);
 $navbar-light-toggler-icon-bg:      url("../imgs/menu.png");
 $navbar-light-toggler-border-color: white;
 $warning : rgba(51,94,234,0.1);
+$danger : #42ba96;
 
 .nav-item .nav-link{
     font-size: 17px;
@@ -27,12 +28,16 @@ $warning : rgba(51,94,234,0.1);
 
 
 .light{
-    font-family: HK Grotesk_Light;
+    font-family: "HK Grotesk Light";
+}
+
+.f-17{
+    font-size:17px;
 }
 
 
 .title{
-    font-family: HK Grotesk
+    font-family: HK Grotesk;
 }
 
 

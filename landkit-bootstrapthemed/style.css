@@ -3,6 +3,14 @@
     src: url('./fonts/HKGrotesk-Regular.otf');
 }
 
+/* @import url(//db.onlinewebfonts.com/c/410c367a12c3efa4acda25c5d48e9abb?family=HK+Grotesk+Light); */
+
+
+@font-face {
+    font-family: HKGrotesk_Light;
+    src: url('./fonts/HKGrotesk-Light.otf');
+}
+
 #home{
     min-height: 84vh;
     display: flex;
@@ -18,6 +26,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+.title{
+    font-family: HK Grotesk;
+}
+
+
+.light{
+    font-family: HKGrotesk_Light;
 }
 
 

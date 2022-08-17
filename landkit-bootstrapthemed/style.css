@@ -204,8 +204,8 @@
     }
 
     .c-img{
-        width: 100%;
-        margin-left: -1000px;
+        width: 103.2%;
+        transform: translate(-9.5px);
     }
 
 }

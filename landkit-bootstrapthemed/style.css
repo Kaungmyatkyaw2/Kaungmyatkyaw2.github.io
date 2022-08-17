@@ -28,6 +28,42 @@
     align-items: center;
 }
 
+.svg{
+    width: 160px;
+    color: #3F5D87;;
+}
+
+
+.c-btn{
+    position:absolute;
+    top: 50%;
+    left: -20px;
+    width: 55px;
+    height: 55px;
+    z-index: 1500; 
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-50%);
+}
+
+
+.c-btn2{
+    position:absolute;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%);
+    
+    z-index: 1500; 
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .title{
     font-family: HK Grotesk;
@@ -120,6 +156,11 @@
     font-size: 31px;
 }
 
+
+.c-card{
+    height: 377px;
+}
+
 @media (max-width:1023px) {
     .home-title{
         font-size: 36px;
@@ -169,6 +210,24 @@
         height: auto;
         width: 100%;
         object-fit: cover;
+    }
+
+    .c-card{
+        height: auto;
+        padding: 20px 0;
+    }
+
+
+    .c-btn,.c-btn2{
+        top: 70%;
+    }
+
+    .c-btn{
+        left: -10px;
+    }
+
+    .c-btn2{
+        right: -10px;
     }
 
 

@@ -2044,3 +2044,9 @@ footer{
 
 
 /* responsive styling end */
+
+
+
+.swal2-title,.swal2-html-container {
+    font-family: sans-serif;
+  }

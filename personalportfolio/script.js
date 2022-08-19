@@ -87,3 +87,64 @@ ScrollReveal().reveal('.contact .left p',{delay:290 , opacity:0, origin : 'left'
 
 
 ScrollReveal().reveal('.contact .right',{delay:230 , opacity:0, origin : 'bottom',distance:'70px',duration:1700,interval:300})
+
+
+
+
+
+
+
+
+let link = document.querySelectorAll(".a-tag");
+
+
+link.forEach(function(current){
+
+
+    current.addEventListener('click',(e)=>{
+
+        e.preventDefault();
+
+
+
+        Swal.fire({
+            title: 'Are you sure to go other?',
+            text: "You will arrive other project!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Let\'s Go!'
+          }).then((result) => {
+            if (result.isConfirmed) {
+
+
+
+                setTimeout(_=>location.href =current.href,2000)
+
+                const Toast = Swal.mixin({
+                    toast: true,
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 2000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                      toast.addEventListener('mouseenter', Swal.stopTimer)
+                      toast.addEventListener('mouseleave', Swal.resumeTimer)
+                    }
+                  })
+                  
+                  Toast.fire({
+                    icon: 'success',
+                    title: 'Running in progress..'
+                  })
+            }
+          })
+          
+
+
+
+    })
+
+
+})

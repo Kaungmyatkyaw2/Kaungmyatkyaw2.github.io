@@ -11,6 +11,16 @@
     src: url('./fonts/HKGrotesk-Light.otf');
 }
 
+.cus-shadow{
+    box-shadow: -1px 0px 39px -25px rgba(0,0,0,0.63);
+}
+
+
+.card-cus{
+    transform: translate(9%);
+    z-index: 100;
+}
+
 #home{
     min-height: 84vh;
     display: flex;
@@ -146,6 +156,13 @@
     border-radius: 50%;
 }
 
+
+.bg-blur{
+    background-color: rgba(51, 94, 234, 0.1);
+    font-size: 12px;
+    letter-spacing: 1.2px;
+}
+
 .hkg{
     padding: 14px 40px;
     font-size: 17px;
@@ -165,7 +182,17 @@
     height: 377px;
 }
 
+.f-18{
+    font-size: 18px;
+}
+
+.cust-btn{
+    border-radius: 0 0 7px 7px;
+}
+
 @media (max-width:1023px) {
+
+
 
     .custom{
         font-size:24px;
@@ -205,6 +232,12 @@
 }
 
 @media (max-width:765px) {
+
+    .card-cus{
+        transform: translate(0);
+        margin-bottom: 40px;
+    }
+
 
     /* #home{
         margin-top: 200px;

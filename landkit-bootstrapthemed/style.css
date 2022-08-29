@@ -11,10 +11,18 @@
     src: url('./fonts/HKGrotesk-Light.otf');
 }
 
+.white-t{
+color: #869ab8;
+}
+
 .cus-shadow{
     box-shadow: -1px 0px 39px -25px rgba(0,0,0,0.63);
 }
 
+
+.f-19{
+    font-size: 19px
+}
 
 .card-cus{
     transform: translate(9%);

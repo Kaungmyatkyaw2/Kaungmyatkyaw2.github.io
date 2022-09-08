@@ -11,6 +11,21 @@
     src: url('./fonts/HKGrotesk-Light.otf');
 }
 
+
+.cus-round{
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
+#img-container{
+    transform-style: preserve-3d;
+    perspective: 1500px;
+}
+
+#img-container img{
+    transform: rotateX(15deg) rotateY(-35deg) skew(-9deg,10deg);
+}
+
 .white-t{
 color: #869ab8;
 }

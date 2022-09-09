@@ -45,7 +45,7 @@ color: #869ab8;
 }
 
 #home{
-    min-height: 84vh;
+    min-height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="./app.css">
     <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./style.css">
-
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 
 </head>
@@ -64,7 +65,7 @@
 
           <div class="row">
 
-            <div class="col-lg-6 col-md-7 col-sm-12 d-flex justify-content-center align-items-center">
+            <div class="col-lg-6 col-md-7 col-sm-12 d-flex justify-content-center align-items-center to-up">
 
                 <div class="container d-md-block d-flex flex-column justify-content-center align-items-center mt-md-0 mt-4">
                   <h1 class="mb-2 home-title text-md-start text-center light">Welcome to <span class="text-primary">Landkit,</span><br>Develop anything.</h1>
@@ -79,7 +80,7 @@
 
             </div>
 
-            <div class="col-lg-6 col-md-5 col-sm-12">
+            <div class="col-lg-6 col-md-5 col-sm-12 to-up">
               <img src="./imgs/illustration-2.png" class=" w-100" alt="" srcset="">
             </div>
 
@@ -96,7 +97,7 @@
 
           <div class="row">
 
-           <div class="col-md-4 col-12 mt-md-0 mt-4">
+           <div class="col-md-4 col-12 mt-md-0 mt-4 to-up">
               <div class="card border-0">
                 <h1 class="card-title text-primary" style="font-size: 34px"><i class="bi bi-toggles"></i></h1>
                   <h3 class=" c-title mt-2 light">Built for developers
@@ -106,7 +107,7 @@
 
 
 
-            <div class="col-md-4 col-12 mt-md-0 mt-4">
+            <div class="col-md-4 col-12 mt-md-0 mt-4 to-up">
               <div class="card border-0">
                 <h1 class="card-title text-primary" style="font-size: 34px"><i class="bi bi-columns-gap"></i></h1>
                   <h3 class=" c-title mt-2 light">Designed to be modern</h3>
@@ -115,7 +116,7 @@
             </div>
 
 
-            <div class="col-md-4 col-12 mt-md-0 mt-4">
+            <div class="col-md-4 col-12 mt-md-0 mt-4 to-up">
               <div class="card border-0">
                 <h1 class="card-title text-primary" style="font-size: 34px"><i class="bi bi-code-slash"></i></h1>
                   <h3 class=" c-title mt-2 light">Documentation for everything</h3>
@@ -190,7 +191,7 @@
           <div class="row d-flex justify-content-center align-items-center flex-md-row flex-column-reverse">
 
 
-            <div class="col-md-6 col-12 d-flex justify-content-center align-items-center ">
+            <div class="col-md-6 col-12 d-flex justify-content-center align-items-center to-right">
 
               <div class="card border-0 shadow-sm rounded-2 c-custom">
                 <img src="./imgs/photo-2.jpg" class=" round c-img" alt="">
@@ -222,9 +223,9 @@
             </div>
 
 
-            <div class="col-md-6 col-sm-9 col-12 ps-sm-0 ps-md-4 pb-md-0 pb-4 ps-4 f-hkg mt-md-0">
+            <div class="col-md-6 col-sm-9 col-12 ps-sm-0 ps-md-4 pb-md-0 pb-4 ps-4 f-hkg mt-md-0 to-left">
 
-              <p class=" title-contact">The most useful resource <span class="d-block text-danger">ever created for developers.</span></p>
+              <p class=" title-contact">The most useful resource <span class="d-block text-danger">ever created for <span class="element"></span></span></p>
 
                 <p class=" light card-text c-text">Using Landkit to build your site means never worrying about designing another page or cross browser compatibility. Our ever-growing library of components and pre-designed layouts will make your life easier.</p>
 
@@ -279,7 +280,7 @@
         
         <div class="row py-5">
           
-          <div class="col-lg-6 col-12">
+          <div class="col-lg-6 col-12 to-right">
 
             <p class="title-contact light">
               We have lots of experience
@@ -334,7 +335,7 @@
 
           </div>
           
-          <div class="col-lg-6 col-12 position-relative mt-lg-0 mt-4">
+          <div class="col-lg-6 col-12 position-relative mt-lg-0 mt-4 to-left">
 
 
             <div id="img-container">
@@ -1027,6 +1028,43 @@
 
 </body>
 <script>
+
+  let toUp = {
+    distance: '90px',
+    origin: 'bottom',
+    interval : 300,
+    duration : 1300,
+  };
+
+  ScrollReveal().reveal('.to-up', toUp);
+
+
+  let toRight = {
+    distance: '100px',
+    origin: 'left',
+    duration : 1700,
+  };
+
+  ScrollReveal().reveal('.to-right', toRight);
+
+
+  let toLeft = {
+    distance: '100px',
+    origin: 'right',
+    duration : 1700,
+  };
+
+  ScrollReveal().reveal('.to-left', toLeft);
+
+  var options = {
+    strings: ['developers', 'founders.','designers.'],
+    typeSpeed: 70,
+    loop:true,
+    backSpeed:60
+  };
+
+  var typed = new Typed('.element', options);
+
      let photoSlides = new bootstrap.Carousel("#aa");
         let textSlides = new bootstrap.Carousel("#bb");
 

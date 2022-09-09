@@ -54,6 +54,13 @@ color: #869ab8;
 }
 
 
+
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
 #contact{
     min-height: 120vh;
     display: flex;
